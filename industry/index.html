@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Industry Application | PIRLab</title>
-  <meta name="description" content="Industry application cases from PIRLab across construction robotics, infrastructure automation, digital twins, road maintenance, and autonomous driving perception.">
+  <meta name="description" content="Industry application modules from PIRLab: autonomous mobile robots and autonomous driving, robot brains and embodied intelligence/VLA, and industrial autonomous robots for construction automation.">
   <link rel="icon" type="image/jpg" href="../imgs/UOC_icon.jpg">
   <link rel="stylesheet" href="../site.css">
 </head>
@@ -37,7 +37,7 @@
       <div class="page-hero-content">
         <p class="eyebrow">Industry Application</p>
         <h1>Physical intelligence for real engineering systems.</h1>
-        <p class="hero-copy">PIRLab translates robot perception, prediction, mapping, and action into application cases for infrastructure, construction, mobility, and digital twins.</p>
+        <p class="hero-copy">PIRLab organizes industrial application around three modules: autonomous mobile robots and autonomous driving, robot brains for embodied intelligence and VLA, and industrial autonomous robots for construction automation.</p>
       </div>
     </section>
 
@@ -49,21 +49,129 @@
         </div>
         <div>
           <p>The CV highlights a deployment-oriented agenda: robot world models for engineering automation, infrastructure automation, construction robotics, 3D vision, SLAM, and robot manipulation.</p>
-          <p>The cases below organize that work by industrial use: what the system perceives, what model it builds, and how that model supports action or decision making.</p>
+          <p>The modules below organize that work by industrial capability: how robots perceive and localize, how robot brains reason and act, and how autonomous robots operate in construction and infrastructure environments.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="section-header wide">
-        <p class="eyebrow">Case Highlights</p>
-        <h2>Representative industrial application cases.</h2>
+        <p class="eyebrow">Three Modules</p>
+        <h2>Industrial applications are grouped by deployable robotic capability.</h2>
+      </div>
+      <div class="case-grid">
+        <article class="case-card">
+          <p class="paper-area">Module 01</p>
+          <h3>Autonomous Mobile Robots / Autonomous Driving</h3>
+          <p>Localization, mapping, tracking, segmentation, odometry, and scene-flow perception for robots and vehicles operating in dynamic environments.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Module 02</p>
+          <h3>Robot Brain / Embodied Intelligence / VLA</h3>
+          <p>World models, action reasoning, VLA-style interfaces, and Real2Sim2Real learning that connect perception with physically grounded robot action.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Module 03</p>
+          <h3>Industrial Autonomous Robots / Construction Automation</h3>
+          <p>Construction robotics, infrastructure automation, digital twins, retrofitting, road maintenance, and industrial inspection workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="mobile-robots">
+      <div class="section-header wide">
+        <p class="eyebrow">Module 01</p>
+        <h2>Autonomous mobile robots and autonomous driving.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../imgs/I2Pnet.gif" alt="Image and LiDAR localization for autonomous driving" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">2D-3D localization</p>
+            <h3>Image-LiDAR registration for vehicle localization</h3>
+            <p>Image-LiDAR registration, LiDAR odometry, segmentation, tracking, and scene flow create a robust perception layer for mobile platforms.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/20_arxiv_3d_odometry.gif" alt="Deep LiDAR odometry for autonomous mobile robots" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">LiDAR odometry</p>
+            <h3>Large-scale 3D localization and motion estimation</h3>
+            <p>Deep LiDAR odometry and point-cloud registration support reliable state estimation for mobile robots and autonomous driving systems.</p>
+          </div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">Perception stack</p>
+          <h3>Localization, tracking, and scene flow</h3>
+          <p>2D-3D registration, multi-object tracking, LiDAR odometry, and 3D scene flow form a practical perception stack for dynamic environments.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Road autonomy</p>
+          <h3>Road-surface reconstruction</h3>
+          <p>Multimodal road data, explicit meshes, and implicit encoding support large-scale road-surface mapping and maintenance-oriented analysis.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Robust deployment</p>
+          <h3>Dynamic scene understanding</h3>
+          <p>Segmentation, occupancy refinement, and motion prediction help robots reason about moving objects and changing road environments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="robot-brain">
+      <div class="section-header wide">
+        <p class="eyebrow">Module 02</p>
+        <h2>Robot brain, embodied intelligence, and VLA.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../imgs/GSRL.gif" alt="Real2Sim2Real robotic manipulation learning" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Real2Sim2Real</p>
+            <h3>Robot learning with 3D scene representations</h3>
+            <p>3D Gaussian Splatting and reinforcement learning connect real scenes, simulation, and physical manipulation for task-level robot action.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/pipeline.png" alt="World model based 3D prediction pipeline" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">World models</p>
+            <h3>Prediction as the robot brain's memory and imagination</h3>
+            <p>Scene-flow prediction, neural mapping, and action-conditioned representations support embodied reasoning before robots move.</p>
+          </div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">VLA</p>
+          <h3>Vision-Language-Action interfaces</h3>
+          <p>Language-guided action reasoning can translate task intent into physically meaningful robot decisions in structured 3D environments.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Embodied AI</p>
+          <h3>Action reasoning in 3D space</h3>
+          <p>Spatial reasoning and world models provide the middle layer between perception outputs and robot policies.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Robot learning</p>
+          <h3>Simulation-to-real transfer</h3>
+          <p>Real2Sim2Real pipelines let robot brains train, test, and adapt policies while staying grounded in real scene geometry.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="construction-automation">
+      <div class="section-header wide">
+        <p class="eyebrow">Module 03</p>
+        <h2>Industrial autonomous robots and construction automation.</h2>
       </div>
       <div class="selected-work-grid">
         <article class="selected-work-card">
           <video src="../imgs/SEEEP.mp4" autoplay muted loop playsinline controls></video>
           <div class="selected-work-copy">
-            <p class="paper-area">Engineering automation</p>
+            <p class="paper-area">Construction automation</p>
             <h3>Robotics for construction and infrastructure workflows</h3>
             <p>Robot world models support site-scale understanding, task reasoning, and automation loops for engineering environments that change over time.</p>
           </div>
@@ -76,27 +184,8 @@
             <p>Neural and Gaussian mapping methods reconstruct actionable 3D scene representations for inspection, retrofitting, monitoring, and simulation.</p>
           </div>
         </article>
-        <article class="selected-work-card">
-          <img src="../imgs/I2Pnet.gif" alt="Image and LiDAR localization for autonomous driving" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Mobility</p>
-            <h3>Autonomous driving perception and localization</h3>
-            <p>Image-LiDAR registration, LiDAR odometry, segmentation, tracking, and scene flow create a robust perception layer for mobile platforms.</p>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <img src="../imgs/GSRL.gif" alt="Real2Sim2Real robotic manipulation learning" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Manipulation</p>
-            <h3>Real2Sim2Real robot learning</h3>
-            <p>3D Gaussian Splatting and reinforcement learning connect real scenes, simulation, and physical manipulation for task-level robot action.</p>
-          </div>
-        </article>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="case-grid">
+      <div class="case-grid section-actions">
         <article class="case-card">
           <p class="paper-area">Construction robotics</p>
           <h3>Robotic brick stacking</h3>
@@ -108,11 +197,6 @@
           <p>Point cloud and image data are converted into geometric asset models for HVAC generation, roof retrofitting, and building information retrieval.</p>
         </article>
         <article class="case-card">
-          <p class="paper-area">Road maintenance</p>
-          <h3>Road-surface reconstruction</h3>
-          <p>Multimodal road data, explicit meshes, and implicit encoding support large-scale road-surface mapping and maintenance-oriented analysis.</p>
-        </article>
-        <article class="case-card">
           <p class="paper-area">Infrastructure sensing</p>
           <h3>Low-cost LiDAR reconstruction</h3>
           <p>Sparse infrastructure point clouds can be restored and reconstructed with diffusion models, prompted segmentation, and dense neural mapping.</p>
@@ -121,11 +205,6 @@
           <p class="paper-area">Energy infrastructure</p>
           <h3>Hydropower digital twins</h3>
           <p>Geometric modelling of hydropower plants creates a foundation for digital twin workflows in inspection, monitoring, and asset management.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Autonomous systems</p>
-          <h3>Localization, tracking, and scene flow</h3>
-          <p>2D-3D registration, multi-object tracking, LiDAR odometry, and 3D scene flow form a practical perception stack for dynamic environments.</p>
         </article>
       </div>
     </section>
