@@ -20,11 +20,20 @@
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="nav-current" href="index.html" aria-current="page">Home</a>
-      <a href="research/index.html">Research</a>
+      <details class="nav-dropdown">
+        <summary>Research</summary>
+        <div class="nav-menu">
+          <a href="research/index.html">Overview</a>
+          <a href="research/stellar-vla/index.html">Stellar VLA</a>
+          <a href="research/roboflow4d/index.html">RoboFlow4D</a>
+          <a href="research/hear/index.html">HEAR</a>
+        </div>
+      </details>
       <a href="papers/index.html">Papers</a>
       <details class="nav-dropdown">
         <summary>Groups</summary>
         <div class="nav-menu">
+          <a href="groups/index.html">Overview</a>
           <a href="cambridge/index.html">Cambridge Robotics Group</a>
           <a href="ireland/index.html">Cambridge-Ireland Centre</a>
           <a href="sjtu/index.html">SJTU Research Group</a>
@@ -37,7 +46,7 @@
   </header>
 
   <main>
-    <section class="hero" style="--hero-image: url('imgs/I2Pnet.gif');">
+    <section class="hero" style="background-image: url('imgs/I2Pnet.gif');">
       <div class="hero-content">
         <p class="eyebrow">PIRLab.github.io</p>
         <h1>Physical Intelligence and Robotics Lab</h1>
@@ -77,21 +86,21 @@
           </div>
         </article>
         <article class="research-card">
-          <img src="imgs/pipeline.png" alt="Diffusion-based scene flow pipeline" loading="lazy">
+          <video src="imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline aria-label="RoboFlow4D real robot flow-guided manipulation"></video>
           <div>
             <span class="topic-index">02</span>
             <h3>World-Model-Based Prediction</h3>
             <p>Building predictive models that forecast scene flow, map evolution, future observations, and action-conditioned physical change.</p>
-            <a href="research/index.html#world-models">Read more</a>
+            <a href="research/roboflow4d/index.html">Read more</a>
           </div>
         </article>
         <article class="research-card">
-          <img src="imgs/GSRL.gif" alt="Robot manipulation learning with 3D Gaussian Splatting" loading="lazy">
+          <video src="imgs/research-projects/stellar-pick-stick.mp4" autoplay muted loop playsinline aria-label="Stellar VLA continual manipulation learning"></video>
           <div>
             <span class="topic-index">03</span>
             <h3>Physics-Based Robot Action</h3>
             <p>Translating perception and prediction into contact-rich manipulation, real-to-sim-to-real learning, robust estimation, and efficient control.</p>
-            <a href="research/index.html#robot-action">Read more</a>
+            <a href="research/stellar-vla/index.html">Read more</a>
           </div>
         </article>
       </div>
@@ -105,12 +114,11 @@
       <div class="leader">
         <img src="imgs/Guangming2.jpg" alt="Guangming Wang" loading="lazy">
         <div>
-          <p>Guangming Wang is an Assistant Professor at the School of Engineering, University of Galway, and a Research Associate in the Department of Engineering at the University of Cambridge. He received his PhD from the Intelligent Robotics and Machine Vision Lab at Shanghai Jiao Tong University.</p>
+          <p>Guangming Wang is an Assistant Professor at the School of Engineering, University of Galway, Cambridge-Ireland International Centre, and a Research Associate in the Department of Engineering at the University of Cambridge. He received his PhD from the Intelligent Robotics and Machine Vision Lab at Shanghai Jiao Tong University.</p>
           <p>He serves as Associate Editor for IEEE RA-L, ICRA, and IROS, and was awarded the Best Associate Editor Award of ICRA 2026. His research connects robot perception, localization, mapping, world modeling, and robot manipulation.</p>
           <div class="link-row">
             <a href="mailto:gw462@cam.ac.uk">Email</a>
             <a href="https://scholar.google.com.hk/citations?user=GGHfHSIAAAAJ&hl=en">Google Scholar</a>
-            <a href="https://github.com/guangmingw">GitHub</a>
           </div>
         </div>
       </div>
@@ -182,9 +190,12 @@
         <h2>Recent highlights</h2>
       </div>
       <ul class="timeline">
-        <li><time>2026.05</time><span>Project-leader paper on SLAM accepted by AAAI 2026.</span></li>
-        <li><time>2026.02</time><span>Co-first-authored SLAM paper accepted by IEEE TPAMI.</span></li>
-        <li><time>2026.01</time><span>First-authored robot manipulation paper accepted by ICRA 2026.</span></li>
+        <li><time>2026.06</time><span>One paper on robot localisation accepted by ECCV 2026.</span></li>
+        <li><time>2026.05</time><span>One paper on world model accepted by ICML 2026.</span></li>
+        <li><time>2025.09</time><span>Invited talk on World Models at the ASPIRE Computer Vision Workshop at Oxford VGG.</span></li>
+        <li><time>2026.02</time><span>One SLAM paper accepted by IEEE TPAMI.</span></li>
+        <li><time>2026.01</time><span>One robot manipulation paper accepted by ICRA 2026.</span></li>
+        <li><time>2025.11</time><span>One paper on SLAM accepted by AAAI 2026.</span></li>
         <li><time>2025.09</time><span>Invited talk on Real2Sim2Real at the Cambridge Computer Vision Workshop.</span></li>
         <li><time>2025.07</time><span>NeRF in Robotics survey accepted by IJRR.</span></li>
       </ul>
@@ -201,7 +212,6 @@
       <a href="industry/index.html">Industry Application</a>
       <a href="mailto:gw462@cam.ac.uk">gw462@cam.ac.uk</a>
       <a href="https://scholar.google.com.hk/citations?user=GGHfHSIAAAAJ&hl=en">Google Scholar</a>
-      <a href="https://github.com/guangmingw">GitHub</a>
     </div>
   </footer>
 </body>

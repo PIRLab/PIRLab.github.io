@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEAR | PIRLab</title>
+  <meta name="description" content="HEAR: a Vision-Sound-Language-Action framework for sound-centric robotic manipulation.">
+  <link rel="icon" type="image/jpg" href="../../imgs/UOC_icon.jpg">
+  <link rel="stylesheet" href="../../site.css">
+</head>
+<body class="page-body">
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="PIRLab home">
+      <span class="brand-mark">PIR</span>
+      <span class="brand-text">Physical Intelligence and Robotics Lab</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <details class="nav-dropdown">
+        <summary class="nav-current" aria-current="page">Research</summary>
+        <div class="nav-menu">
+          <a href="../index.html">Overview</a>
+          <a href="../stellar-vla/index.html">Stellar VLA</a>
+          <a href="../roboflow4d/index.html">RoboFlow4D</a>
+          <a class="nav-current" href="index.html" aria-current="page">HEAR</a>
+        </div>
+      </details>
+      <a href="../../papers/index.html">Papers</a>
+      <details class="nav-dropdown">
+        <summary>Groups</summary>
+        <div class="nav-menu">
+          <a href="../../groups/index.html">Overview</a>
+          <a href="../../cambridge/index.html">Cambridge Robotics Group</a>
+          <a href="../../ireland/index.html">Cambridge-Ireland Centre</a>
+          <a href="../../sjtu/index.html">SJTU Research Group</a>
+        </div>
+      </details>
+      <a href="../../industry/index.html">Industry Application</a>
+      <a href="../../join/index.html">Join</a>
+      <a href="../../contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image: url('../../imgs/research-projects/hear-headpic.webp');">
+      <div class="page-hero-content">
+        <p class="eyebrow">Vision-Sound-Language-Action</p>
+        <h1>HEAR.</h1>
+        <p class="hero-copy">A sound-centric manipulation framework that extends VLA toward robots that see, hear, remember, and react.</p>
+        <div class="hero-actions">
+          <a class="button light" href="https://hear.irmv.top/">Project page</a>
+          <a class="button outline-light" href="https://arxiv.org/abs/2603.16086">Paper</a>
+          <a class="button outline-light" href="https://github.com/IRMVLab/HEAR">Code</a>
+          <a class="button outline-light" href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main">Dataset</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="case-grid">
+        <a class="case-card" href="#story">
+          <p class="paper-area">01</p>
+          <h3>From VLA to VSLA</h3>
+          <p>Why vision-only action policies miss short, asynchronous acoustic evidence.</p>
+        </a>
+        <a class="case-card" href="#framework">
+          <p class="paper-area">02</p>
+          <h3>HEAR Framework</h3>
+          <p>Historizer, Envisioner, Advancer, and Realizer form the sound-aware control loop.</p>
+        </a>
+        <a class="case-card" href="#evaluation">
+          <p class="paper-area">03</p>
+          <h3>Evaluation and Videos</h3>
+          <p>OpenX-Sound, HEAR-Bench, and sound-causal real-robot demonstrations.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="page-summary">
+        <div class="section-header">
+          <p class="eyebrow">From VLA to VSLA</p>
+          <h2>Robots need to listen during action, not only before action.</h2>
+        </div>
+        <div>
+          <p>Standard VLA policies work well when the useful evidence stays visible: a cup remains on the table, a drawer stays open, or a target object remains in view. Sound-centric tasks are different. The decisive cue may be a short beep, collision click, process sound, or spoken confirmation that happens between two policy queries.</p>
+          <p>HEAR extends the control setting to Vision-Sound-Language-Action. The robot receives delayed multi-view vision, causal audio, language, and proprioception, then must preserve fleeting evidence across open-loop action chunks before deciding when to move.</p>
+        </div>
+      </div>
+      <div class="selected-work-grid section-actions">
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/hear-headpic.webp" alt="HEAR sound-centric manipulation overview" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Problem setting</p>
+            <h3>Sound-causal manipulation</h3>
+            <p>The policy must remember acoustic cues and avoid visually plausible but acoustically premature actions.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/hear-moka-pot.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Long-horizon process</p>
+            <h3>Moka coffee</h3>
+            <p>A process-monitoring task where completion is more clearly indicated by sound than by a static camera view.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="framework">
+      <div class="section-header wide">
+        <p class="eyebrow">Framework</p>
+        <h2>Memory, multimodal reasoning, temporal grounding, and smooth action.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/hear-overview.webp" alt="HEAR full framework overview" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">System overview</p>
+            <h3>HEAR architecture</h3>
+            <p>HEAR processes streaming sound, reasons over multimodal context, predicts near-future audio, and generates smooth action chunks.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/hear-historizer.webp" alt="HEAR Historizer module" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Historizer</p>
+            <h3>Causal audio memory</h3>
+            <p>A stateful transformer compresses recent audio packets so short cues can survive execution gaps.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/hear-envisioner.webp" alt="HEAR Envisioner module" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Envisioner</p>
+            <h3>Multimodal reasoning</h3>
+            <p>High-level and low-level reasoning fuse vision, language, proprioception, current sound, and audio memory.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/hear-advancer.webp" alt="HEAR Advancer module" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Advancer and Realizer</p>
+            <h3>Temporal prediction to action chunks</h3>
+            <p>Future-audio prediction grounds long waiting phases, while conditional flow matching produces smooth robot actions.</p>
+          </div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">VSLA</p>
+          <h3>Delayed decisions</h3>
+          <p>Each decision is conditioned on vision, causal audio, language, and robot state rather than a static audio snapshot.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">OpenX-Sound</p>
+          <h3>Audio-augmented pretraining</h3>
+          <p>The project releases a synchronized sound extension of Open X-Embodiment for large-scale robot trajectory learning.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">HEAR-Bench</p>
+          <h3>Sound-causal evaluation</h3>
+          <p>The benchmark penalizes premature visual actions and tests whether the policy truly waits for the required acoustic cue.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="evaluation">
+      <div class="section-header wide">
+        <p class="eyebrow">Training and Evaluation</p>
+        <h2>Sound-centric tasks cover transient events, speech, process sounds, and contact feedback.</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-block">
+          <p>The simulation benchmark includes alarm, microwave, speech timing, interruption, material checking, water pouring, and boiling tasks. These tasks stress waiting, transient triggers, prosody, impact acoustics, and long-horizon process monitoring.</p>
+        </div>
+        <div class="content-block">
+          <p>Real-robot deployment adds room reverberation, background noise, mechanical ego-noise, and visual aliasing. The tasks include coffee monitoring, answering a phone, shaking bottles for active acoustic sensing, and real alarm-clock reaction.</p>
+        </div>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">Simulation</p>
+          <h3>81% average success</h3>
+          <p>The source project reports strong gains on sound-causal simulation tasks.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Real robot</p>
+          <h3>54% average success</h3>
+          <p>The real-robot suite emphasizes acoustic domain shift and physically grounded sound cues.</p>
+        </article>
+        <a class="case-card" href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main">
+          <p class="paper-area">Dataset</p>
+          <h3>OpenX-Sound</h3>
+          <p>Audio-augmented robot trajectories released on Hugging Face.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header wide">
+        <p class="eyebrow">Experiment Videos</p>
+        <h2>Selected sound-centric demonstrations copied into the local page.</h2>
+      </div>
+      <div class="project-media-grid">
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/hear-moka-pot.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Process sound</p><h3>Moka Coffee</h3><p>The robot must monitor the acoustic transition before pouring.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/hear-microwave.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Transient trigger</p><h3>Microwave</h3><p>A waiting task where the robot should react only after the relevant sound occurs.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/hear-check-yes.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Speech timing</p><h3>Check Yes</h3><p>The policy conditions progress on spoken confirmation rather than a static visual state.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/hear-interrupt.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Interruption</p><h3>Interrupt</h3><p>The robot must preserve and react to a brief acoustic event during execution.</p></div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <a class="case-card" href="https://hear.irmv.top/#videos">
+          <p class="paper-area">Full video set</p>
+          <h3>External-view and onboard recordings</h3>
+          <p>The original page includes additional large real-robot videos and robot-perspective input recordings.</p>
+        </a>
+        <article class="case-card">
+          <p class="paper-area">Robustness</p>
+          <h3>Added disturbances</h3>
+          <p>Ablations test traffic noise, white noise, robot ego-noise, dialogue noise, microphone shifts, object shifts, distractors, and speech variants.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Design principle</p>
+          <h3>Reject premature action</h3>
+          <p>The benchmark rewards policies that stay sound-causal rather than acting on visually tempting shortcuts.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="footer-brand">PIRLab.github.io</p>
+      <p>HEAR</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Research Overview</a>
+      <a href="../stellar-vla/index.html">Stellar VLA</a>
+      <a href="../roboflow4d/index.html">RoboFlow4D</a>
+      <a href="../../contact/index.html">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -16,11 +16,20 @@
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="../index.html">Home</a>
-      <a class="nav-current" href="index.html" aria-current="page">Research</a>
+      <details class="nav-dropdown">
+        <summary class="nav-current" aria-current="page">Research</summary>
+        <div class="nav-menu">
+          <a class="nav-current" href="index.html" aria-current="page">Overview</a>
+          <a href="stellar-vla/index.html">Stellar VLA</a>
+          <a href="roboflow4d/index.html">RoboFlow4D</a>
+          <a href="hear/index.html">HEAR</a>
+        </div>
+      </details>
       <a href="../papers/index.html">Papers</a>
       <details class="nav-dropdown">
         <summary>Groups</summary>
         <div class="nav-menu">
+          <a href="../groups/index.html">Overview</a>
           <a href="../cambridge/index.html">Cambridge Robotics Group</a>
           <a href="../ireland/index.html">Cambridge-Ireland Centre</a>
           <a href="../sjtu/index.html">SJTU Research Group</a>
@@ -33,7 +42,7 @@
   </header>
 
   <main>
-    <section class="page-hero" style="--hero-image: url('../imgs/sem_mapping.gif');">
+    <section class="page-hero" style="background-image: url('../imgs/research-projects/roboflow4d-pipeline.png');">
       <div class="page-hero-content">
         <p class="eyebrow">Research</p>
         <h1>Physical intelligence from perception to action.</h1>
@@ -42,15 +51,66 @@
     </section>
 
     <section class="section">
-      <div class="page-summary">
-        <div class="section-header">
-          <p class="eyebrow">Overview</p>
-          <h2>Three directions that reinforce one another.</h2>
-        </div>
-        <div>
-          <p>We do not treat perception, prediction, and control as isolated modules. Our research aims to build robot systems in which scene understanding improves forecasting, forecasting improves planning, and action closes the loop back onto better representations.</p>
-          <p>The shared theme is physical realism: models should respect geometry, semantics, dynamics, and contact, and should matter on real robots rather than only on offline benchmarks.</p>
-        </div>
+      <div class="section-header wide">
+        <p class="eyebrow">Overview</p>
+        <h2>Three main directions form one physical intelligence loop.</h2>
+      </div>
+      <div class="overview-copy">
+        <p>We do not treat perception, prediction, and control as isolated modules. Our research builds robot systems in which scene understanding improves forecasting, forecasting improves planning, and action closes the loop back onto better representations.</p>
+        <p>The shared theme is physical realism: models should respect geometry, semantics, dynamics, and contact, and should matter on real robots rather than only on offline benchmarks.</p>
+      </div>
+      <div class="direction-flow" aria-label="Research direction sequence">
+        <a class="direction-card" href="#robot-vision">
+          <span class="topic-index">01</span>
+          <h3>3D/4D Robot Vision</h3>
+          <p>Robots first need rich perception: geometry, semantics, localization, mapping, and motion from cameras, LiDAR, and point clouds.</p>
+        </a>
+        <a class="direction-card" href="#world-models">
+          <span class="topic-index">02</span>
+          <h3>World-Model-Based Prediction</h3>
+          <p>Perception becomes prediction: scene flow, map evolution, future observations, and action-conditioned physical change.</p>
+        </a>
+        <a class="direction-card" href="#robot-action">
+          <span class="topic-index">03</span>
+          <h3>Physics-Based Robot Action</h3>
+          <p>Prediction becomes action: manipulation, VLA policies, robust estimation, and physically grounded robot control.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="embodied-world-models">
+      <div class="section-header wide">
+        <p class="eyebrow">Embodied Intelligence</p>
+        <h2>Featured VLA and world-model projects.</h2>
+      </div>
+      <div class="selected-work-grid three">
+        <article class="selected-work-card">
+          <video src="../imgs/research-projects/stellar-pick-stick.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Continual VLA</p>
+            <h3>Stellar VLA</h3>
+            <p>Continual skill knowledge for robot manipulation, connecting task memory with vision-language-action policies.</p>
+            <div class="link-row"><a href="stellar-vla/index.html">Local page</a><a href="https://stellarvla.github.io/">Project page</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Flow world model</p>
+            <h3>RoboFlow4D</h3>
+            <p>A lightweight 4D flow world model for real-time, flow-guided robotic manipulation.</p>
+            <div class="link-row"><a href="roboflow4d/index.html">Local page</a><a href="https://simonlinsx.github.io/RoboFlow4D_Page/">Project page</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../imgs/research-projects/hear-moka-pot.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">VSLA</p>
+            <h3>HEAR</h3>
+            <p>A Vision-Sound-Language-Action framework for robots that use acoustic cues during manipulation.</p>
+            <div class="link-row"><a href="hear/index.html">Local page</a><a href="https://hear.irmv.top/">Project page</a></div>
+          </div>
+        </article>
       </div>
     </section>
 

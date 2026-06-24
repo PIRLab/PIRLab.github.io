@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoboFlow4D | PIRLab</title>
+  <meta name="description" content="RoboFlow4D: a lightweight flow world model for real-time flow-guided robotic manipulation.">
+  <link rel="icon" type="image/jpg" href="../../imgs/UOC_icon.jpg">
+  <link rel="stylesheet" href="../../site.css">
+</head>
+<body class="page-body">
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="PIRLab home">
+      <span class="brand-mark">PIR</span>
+      <span class="brand-text">Physical Intelligence and Robotics Lab</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <details class="nav-dropdown">
+        <summary class="nav-current" aria-current="page">Research</summary>
+        <div class="nav-menu">
+          <a href="../index.html">Overview</a>
+          <a href="../stellar-vla/index.html">Stellar VLA</a>
+          <a class="nav-current" href="index.html" aria-current="page">RoboFlow4D</a>
+          <a href="../hear/index.html">HEAR</a>
+        </div>
+      </details>
+      <a href="../../papers/index.html">Papers</a>
+      <details class="nav-dropdown">
+        <summary>Groups</summary>
+        <div class="nav-menu">
+          <a href="../../groups/index.html">Overview</a>
+          <a href="../../cambridge/index.html">Cambridge Robotics Group</a>
+          <a href="../../ireland/index.html">Cambridge-Ireland Centre</a>
+          <a href="../../sjtu/index.html">SJTU Research Group</a>
+        </div>
+      </details>
+      <a href="../../industry/index.html">Industry Application</a>
+      <a href="../../join/index.html">Join</a>
+      <a href="../../contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image: url('../../imgs/research-projects/roboflow4d-pipeline.png');">
+      <div class="page-hero-content">
+        <p class="eyebrow">World Model</p>
+        <h1>RoboFlow4D.</h1>
+        <p class="hero-copy">A lightweight flow world model that predicts future multi-frame 3D flows and guides real-time robotic manipulation.</p>
+        <div class="hero-actions">
+          <a class="button light" href="https://simonlinsx.github.io/RoboFlow4D_Page/">Project page</a>
+          <a class="button outline-light" href="https://arxiv.org/abs/2605.17522">Paper</a>
+          <a class="button outline-light" href="https://github.com/Simonlinsx/RoboFlow4D">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="case-grid">
+        <a class="case-card" href="#planning">
+          <p class="paper-area">01</p>
+          <h3>Planning in 3D Space</h3>
+          <p>Interactive task examples show flow-conditioned planning for manipulation scenes.</p>
+        </a>
+        <a class="case-card" href="#pipeline">
+          <p class="paper-area">02</p>
+          <h3>Pipeline</h3>
+          <p>RGB, points, and language are fused to predict future 3D flow and guide action.</p>
+        </a>
+        <a class="case-card" href="#videos">
+          <p class="paper-area">03</p>
+          <h3>Videos and Results</h3>
+          <p>Simulation videos, real-robot videos, and benchmark tables are reproduced below.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="planning">
+      <div class="page-summary">
+        <div class="section-header">
+          <p class="eyebrow">Planning in 3D Space</p>
+          <h2>Predicted flow becomes a spatial plan.</h2>
+        </div>
+        <div>
+          <p>RoboFlow4D treats world modelling as a closed loop between observation, prediction, and execution. Given a visual sequence and language instruction, the model predicts future multi-frame 3D flow that describes how task-relevant geometry should move.</p>
+          <p>The original project page includes interactive 3D demos for household manipulation tasks such as Moka Pot, Drawer, Book to Caddy, and Push Cube. The local page keeps the task structure and links back to the live project resources.</p>
+        </div>
+      </div>
+      <div class="case-grid section-actions">
+        <a class="case-card" href="https://simonlinsx.github.io/RoboFlow4D_Page/representative_5_demos_2/LIBERO_moka_dynamic/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo_demo_0/demo_demo_0/all_stages_3d.html">
+          <p class="paper-area">Interactive demo</p>
+          <h3>Moka Pot</h3>
+          <p>Turn on the stove and put the moka pot on it.</p>
+        </a>
+        <a class="case-card" href="https://simonlinsx.github.io/RoboFlow4D_Page/representative_5_demos_2/LIBERO_kitchen4_depth_aligned_dynamic/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_demo/demo_demo_1/all_stages_3d.html">
+          <p class="paper-area">Interactive demo</p>
+          <h3>Drawer</h3>
+          <p>Open a drawer, place an object inside, and complete the action sequence.</p>
+        </a>
+        <a class="case-card" href="https://simonlinsx.github.io/RoboFlow4D_Page/representative_5_demos/ManiSkill_PushCube/trajectory.rgb.pd_ee_delta_pose.physx_cpu/demo_15/all_stages_3d.html">
+          <p class="paper-area">Interactive demo</p>
+          <h3>Push Cube</h3>
+          <p>Use predicted 3D motion to support goal-directed pushing.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="pipeline">
+      <div class="section-header wide">
+        <p class="eyebrow">Pipeline</p>
+        <h2>A lightweight flow world model for real-time manipulation.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/roboflow4d-pipeline.png" alt="RoboFlow4D full pipeline" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">FlowDiT</p>
+            <h3>RGB, point, and text tokens to multi-frame 3D flow</h3>
+            <p>The model encodes observations and task instructions, predicts future 3D flow, and feeds that flow into a policy for action generation.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/roboflow4d-stack.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Closed loop</p>
+            <h3>Slow planner, fast executor</h3>
+            <p>RoboFlow4D acts as a predictive planner, while the action policy executes conditioned on both robot state and explicit flow.</p>
+          </div>
+        </article>
+      </div>
+      <div class="metrics-grid section-actions">
+        <div class="metric">
+          <strong>+6.2 / +11.0</strong>
+          <p>Average success-rate gains reported over base policies on LIBERO and ManiSkill3.</p>
+        </div>
+        <div class="metric">
+          <strong>120x</strong>
+          <p>Reported planning speedup compared with modular flow-planning pipelines.</p>
+        </div>
+        <div class="metric">
+          <strong>&lt; 1s</strong>
+          <p>Goal-oriented planning latency aimed at real-time robot deployment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-header wide">
+        <p class="eyebrow">Simulation Videos</p>
+        <h2>Flow-conditioned policy rollouts in benchmark tasks.</h2>
+      </div>
+      <div class="project-media-grid four">
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-basket.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Object</p><h3>Cream cheese to basket</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-milk.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Object</p><h3>Milk to basket</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-wooden-cabinet.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Spatial</p><h3>Bowl on cabinet to plate</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-ramekin.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Spatial</p><h3>Bowl on ramekin to plate</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-drawer.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Goal</p><h3>Open drawer and place bowl</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-cheese-bowl.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Goal</p><h3>Cream cheese to bowl</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-moka.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Long</p><h3>Both moka pots on stove</h3></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-sim-mugs.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">LIBERO Long</p><h3>Two mugs to two plates</h3></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header wide">
+        <p class="eyebrow">Real-World Videos</p>
+        <h2>Robot manipulation with predicted flow.</h2>
+      </div>
+      <div class="project-media-grid">
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">Real robot</p><h3>Cup insertion</h3><p>Pick up the brown cup and insert it into the black cup.</p></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-assemble.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">Real robot</p><h3>Pick-and-place assembly</h3><p>Place an object into the target workspace with flow-guided control.</p></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-drawer.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">Real robot</p><h3>Drawer manipulation</h3><p>Open the top drawer, place the red cube inside, and close it.</p></div></article>
+        <article class="selected-work-card"><video src="../../imgs/research-projects/roboflow4d-stack.mp4" autoplay muted loop playsinline controls></video><div class="selected-work-copy"><p class="paper-area">Real robot</p><h3>Stacking</h3><p>Pick up the red cube and place it on the blue cube.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header wide">
+        <p class="eyebrow">Quantitative Results</p>
+        <h2>Benchmark gains with RoboFlow4D guidance.</h2>
+      </div>
+      <div class="result-table-wrap">
+        <table class="result-table">
+          <thead><tr><th>Method</th><th>Spatial</th><th>Object</th><th>Goal</th><th>Long</th><th>Average</th></tr></thead>
+          <tbody>
+            <tr><td>Octo</td><td>78.9</td><td>85.7</td><td>84.6</td><td>51.1</td><td>75.1</td></tr>
+            <tr><td>SpatialVLA</td><td>88.2</td><td>89.9</td><td>78.6</td><td>55.5</td><td>78.1</td></tr>
+            <tr><td>4D-VLA</td><td>88.9</td><td>95.2</td><td>90.9</td><td>79.1</td><td>88.6</td></tr>
+            <tr><td>DP</td><td>81.6</td><td>91.5</td><td>78.4</td><td>64.0</td><td>78.9</td></tr>
+            <tr><td>DP + RoboFlow4D</td><td>89.8</td><td>93.2</td><td>85.2</td><td>72.0</td><td>85.1</td></tr>
+            <tr><td>DiT</td><td>84.2</td><td>96.3</td><td>85.4</td><td>68.8</td><td>83.7</td></tr>
+            <tr><td>DiT + RoboFlow4D</td><td>90.2</td><td>97.0</td><td>88.4</td><td>75.2</td><td>87.7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">Real-world DP gain</p>
+          <h3>+12.5 average success</h3>
+          <p>RoboFlow4D improves DP real-robot average success while reducing average completion time in the reported tasks.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Real-world DiT gain</p>
+          <h3>+11.3 average success</h3>
+          <p>The same flow guidance improves DiT across pick-and-place, stack, assemble, and drawer scenarios.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Deployment</p>
+          <h3>Lightweight world modelling</h3>
+          <p>The system is designed to make predictive 3D motion practical inside a robot control loop.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="footer-brand">PIRLab.github.io</p>
+      <p>RoboFlow4D</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Research Overview</a>
+      <a href="../stellar-vla/index.html">Stellar VLA</a>
+      <a href="../hear/index.html">HEAR</a>
+      <a href="../../contact/index.html">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

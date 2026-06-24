@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Industry Application | PIRLab</title>
-  <meta name="description" content="Industry application modules from PIRLab: autonomous mobile robots and autonomous driving, robot brains and embodied intelligence/VLA, and industrial autonomous robots for construction automation.">
+  <meta name="description" content="Industry application modules from PIRLab: robot brains and embodied intelligence/VLA, industrial autonomous robots for construction automation, and autonomous mobile robots/autonomous driving.">
   <link rel="icon" type="image/jpg" href="../imgs/UOC_icon.jpg">
   <link rel="stylesheet" href="../site.css">
 </head>
@@ -16,11 +16,20 @@
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="../index.html">Home</a>
-      <a href="../research/index.html">Research</a>
+      <details class="nav-dropdown">
+        <summary>Research</summary>
+        <div class="nav-menu">
+          <a href="../research/index.html">Overview</a>
+          <a href="../research/stellar-vla/index.html">Stellar VLA</a>
+          <a href="../research/roboflow4d/index.html">RoboFlow4D</a>
+          <a href="../research/hear/index.html">HEAR</a>
+        </div>
+      </details>
       <a href="../papers/index.html">Papers</a>
       <details class="nav-dropdown">
         <summary>Groups</summary>
         <div class="nav-menu">
+          <a href="../groups/index.html">Overview</a>
           <a href="../cambridge/index.html">Cambridge Robotics Group</a>
           <a href="../ireland/index.html">Cambridge-Ireland Centre</a>
           <a href="../sjtu/index.html">SJTU Research Group</a>
@@ -33,11 +42,11 @@
   </header>
 
   <main>
-    <section class="page-hero" style="--hero-image: url('../imgs/photo.jpg');">
+    <section class="page-hero" style="background-image: url('../imgs/industry.jpg');">
       <div class="page-hero-content">
         <p class="eyebrow">Industry Application</p>
         <h1>Physical intelligence for real engineering systems.</h1>
-        <p class="hero-copy">PIRLab organizes industrial application around three modules: autonomous mobile robots and autonomous driving, robot brains for embodied intelligence and VLA, and industrial autonomous robots for construction automation.</p>
+        <p class="hero-copy">PIRLab organizes industrial application around three modules: robot brains for embodied intelligence and VLA, industrial autonomous robots for construction automation, and autonomous mobile robots and autonomous driving.</p>
       </div>
     </section>
 
@@ -49,7 +58,7 @@
         </div>
         <div>
           <p>The CV highlights a deployment-oriented agenda: robot world models for engineering automation, infrastructure automation, construction robotics, 3D vision, SLAM, and robot manipulation.</p>
-          <p>The modules below organize that work by industrial capability: how robots perceive and localize, how robot brains reason and act, and how autonomous robots operate in construction and infrastructure environments.</p>
+          <p>The modules below organize that work by industrial capability: how robot brains reason and act, how autonomous robots operate in construction and infrastructure environments, and how robots perceive and localize in dynamic driving-scale scenes.</p>
         </div>
       </div>
     </section>
@@ -62,25 +71,120 @@
       <div class="case-grid">
         <article class="case-card">
           <p class="paper-area">Module 01</p>
-          <h3>Autonomous Mobile Robots / Autonomous Driving</h3>
-          <p>Localization, mapping, tracking, segmentation, odometry, and scene-flow perception for robots and vehicles operating in dynamic environments.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Module 02</p>
           <h3>Robot Brain / Embodied Intelligence / VLA</h3>
           <p>World models, action reasoning, VLA-style interfaces, and Real2Sim2Real learning that connect perception with physically grounded robot action.</p>
         </article>
         <article class="case-card">
-          <p class="paper-area">Module 03</p>
+          <p class="paper-area">Module 02</p>
           <h3>Industrial Autonomous Robots / Construction Automation</h3>
-          <p>Construction robotics, infrastructure automation, digital twins, retrofitting, road maintenance, and industrial inspection workflows.</p>
+          <p>Robotic brick laying and autonomous crane operation for construction-site automation and industrial robotic deployment.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Module 03</p>
+          <h3>Autonomous Mobile Robots / Autonomous Driving</h3>
+          <p>Localization, mapping, tracking, segmentation, odometry, and scene-flow perception for robots and vehicles operating in dynamic environments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="robot-brain">
+      <div class="section-header wide">
+        <p class="eyebrow">Module 01</p>
+        <h2>Robot brain, embodied intelligence, and VLA.</h2>
+      </div>
+      <div class="selected-work-grid three">
+        <article class="selected-work-card">
+          <video src="../imgs/research-projects/stellar-pick-stick.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Continual VLA</p>
+            <h3>Stellar VLA for evolving robot skills</h3>
+            <p>Continual skill knowledge helps embodied agents acquire new manipulation tasks while retaining earlier capabilities.</p>
+            <div class="link-row"><a href="../research/stellar-vla/index.html">Project page</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Flow world model</p>
+            <h3>RoboFlow4D for real-time action guidance</h3>
+            <p>Predicted 4D flow gives the robot brain an explicit model of how objects should move under a task instruction.</p>
+            <div class="link-row"><a href="../research/roboflow4d/index.html">Project page</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../imgs/research-projects/hear-microwave.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Vision-Sound-Language-Action</p>
+            <h3>HEAR for sound-centric manipulation</h3>
+            <p>Streaming sound, causal memory, and multimodal reasoning let robots react to acoustic events during execution.</p>
+            <div class="link-row"><a href="../research/hear/index.html">Project page</a></div>
+          </div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">VLA</p>
+          <h3>Continual skill knowledge</h3>
+          <p>VLA systems need to accumulate task and skill knowledge across deployments without forgetting earlier behaviours.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">World models</p>
+          <h3>Flow as physical imagination</h3>
+          <p>4D flow prediction lets robots anticipate scene evolution before committing to contact-rich actions.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Multimodal control</p>
+          <h3>Seeing, hearing, and acting</h3>
+          <p>Sound-aware policies extend embodied intelligence beyond static visual evidence and into temporal event understanding.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="construction-automation">
+      <div class="section-header wide">
+        <p class="eyebrow">Module 02</p>
+        <h2>Industrial autonomous robots and construction automation.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <video src="../imgs/our brick laying robot.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Brick laying robot</p>
+            <h3>Autonomous robotic brick laying</h3>
+            <p>The brick-laying robot demonstrates construction manipulation, site-aware motion, and task execution for physical automation workflows.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../imgs/Our video for autonomous crane.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy">
+            <p class="paper-area">Autonomous crane</p>
+            <h3>Autonomous crane operation</h3>
+            <p>The crane demonstration focuses on autonomous lifting, perception-driven control, and industrial robot coordination in construction environments.</p>
+          </div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">Deployment target</p>
+          <h3>Construction-site autonomy</h3>
+          <p>These systems move industrial robotics from structured lab tasks toward site-scale construction processes with heavy equipment and physical materials.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Robot capability</p>
+          <h3>Manipulation and lifting</h3>
+          <p>Brick laying and crane operation cover complementary capabilities: precise contact-rich manipulation and large-scale autonomous material handling.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Physical intelligence</p>
+          <h3>Perception to action</h3>
+          <p>3D perception, world modelling, and robot control are combined so construction robots can reason about geometry, tools, materials, and constraints.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="mobile-robots">
       <div class="section-header wide">
-        <p class="eyebrow">Module 01</p>
+        <p class="eyebrow">Module 03</p>
         <h2>Autonomous mobile robots and autonomous driving.</h2>
       </div>
       <div class="selected-work-grid">
@@ -116,95 +220,6 @@
           <p class="paper-area">Robust deployment</p>
           <h3>Dynamic scene understanding</h3>
           <p>Segmentation, occupancy refinement, and motion prediction help robots reason about moving objects and changing road environments.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="robot-brain">
-      <div class="section-header wide">
-        <p class="eyebrow">Module 02</p>
-        <h2>Robot brain, embodied intelligence, and VLA.</h2>
-      </div>
-      <div class="selected-work-grid">
-        <article class="selected-work-card">
-          <img src="../imgs/GSRL.gif" alt="Real2Sim2Real robotic manipulation learning" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Real2Sim2Real</p>
-            <h3>Robot learning with 3D scene representations</h3>
-            <p>3D Gaussian Splatting and reinforcement learning connect real scenes, simulation, and physical manipulation for task-level robot action.</p>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <img src="../imgs/pipeline.png" alt="World model based 3D prediction pipeline" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">World models</p>
-            <h3>Prediction as the robot brain's memory and imagination</h3>
-            <p>Scene-flow prediction, neural mapping, and action-conditioned representations support embodied reasoning before robots move.</p>
-          </div>
-        </article>
-      </div>
-      <div class="case-grid section-actions">
-        <article class="case-card">
-          <p class="paper-area">VLA</p>
-          <h3>Vision-Language-Action interfaces</h3>
-          <p>Language-guided action reasoning can translate task intent into physically meaningful robot decisions in structured 3D environments.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Embodied AI</p>
-          <h3>Action reasoning in 3D space</h3>
-          <p>Spatial reasoning and world models provide the middle layer between perception outputs and robot policies.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Robot learning</p>
-          <h3>Simulation-to-real transfer</h3>
-          <p>Real2Sim2Real pipelines let robot brains train, test, and adapt policies while staying grounded in real scene geometry.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="construction-automation">
-      <div class="section-header wide">
-        <p class="eyebrow">Module 03</p>
-        <h2>Industrial autonomous robots and construction automation.</h2>
-      </div>
-      <div class="selected-work-grid">
-        <article class="selected-work-card">
-          <video src="../imgs/SEEEP.mp4" autoplay muted loop playsinline controls></video>
-          <div class="selected-work-copy">
-            <p class="paper-area">Construction automation</p>
-            <h3>Robotics for construction and infrastructure workflows</h3>
-            <p>Robot world models support site-scale understanding, task reasoning, and automation loops for engineering environments that change over time.</p>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <img src="../imgs/sem_mapping.gif" alt="Dense semantic mapping for industrial environments" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Digital twins</p>
-            <h3>Dense semantic maps for built assets</h3>
-            <p>Neural and Gaussian mapping methods reconstruct actionable 3D scene representations for inspection, retrofitting, monitoring, and simulation.</p>
-          </div>
-        </article>
-      </div>
-      <div class="case-grid section-actions">
-        <article class="case-card">
-          <p class="paper-area">Construction robotics</p>
-          <h3>Robotic brick stacking</h3>
-          <p>Action reasoning in 3D space uses language and spatial models to support robot task planning for brick stacking and site automation.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Building retrofitting</p>
-          <h3>HVAC and roof digital twins</h3>
-          <p>Point cloud and image data are converted into geometric asset models for HVAC generation, roof retrofitting, and building information retrieval.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Infrastructure sensing</p>
-          <h3>Low-cost LiDAR reconstruction</h3>
-          <p>Sparse infrastructure point clouds can be restored and reconstructed with diffusion models, prompted segmentation, and dense neural mapping.</p>
-        </article>
-        <article class="case-card">
-          <p class="paper-area">Energy infrastructure</p>
-          <h3>Hydropower digital twins</h3>
-          <p>Geometric modelling of hydropower plants creates a foundation for digital twin workflows in inspection, monitoring, and asset management.</p>
         </article>
       </div>
     </section>

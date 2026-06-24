@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stellar VLA | PIRLab</title>
+  <meta name="description" content="Stellar VLA: continual skill knowledge for vision-language-action robot manipulation.">
+  <link rel="icon" type="image/jpg" href="../../imgs/UOC_icon.jpg">
+  <link rel="stylesheet" href="../../site.css">
+</head>
+<body class="page-body">
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="PIRLab home">
+      <span class="brand-mark">PIR</span>
+      <span class="brand-text">Physical Intelligence and Robotics Lab</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <details class="nav-dropdown">
+        <summary class="nav-current" aria-current="page">Research</summary>
+        <div class="nav-menu">
+          <a href="../index.html">Overview</a>
+          <a class="nav-current" href="index.html" aria-current="page">Stellar VLA</a>
+          <a href="../roboflow4d/index.html">RoboFlow4D</a>
+          <a href="../hear/index.html">HEAR</a>
+        </div>
+      </details>
+      <a href="../../papers/index.html">Papers</a>
+      <details class="nav-dropdown">
+        <summary>Groups</summary>
+        <div class="nav-menu">
+          <a href="../../groups/index.html">Overview</a>
+          <a href="../../cambridge/index.html">Cambridge Robotics Group</a>
+          <a href="../../ireland/index.html">Cambridge-Ireland Centre</a>
+          <a href="../../sjtu/index.html">SJTU Research Group</a>
+        </div>
+      </details>
+      <a href="../../industry/index.html">Industry Application</a>
+      <a href="../../join/index.html">Join</a>
+      <a href="../../contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image: url('../../imgs/research-projects/stellar-head.png');">
+      <div class="page-hero-content">
+        <p class="eyebrow">Vision-Language-Action</p>
+        <h1>Stellar VLA.</h1>
+        <p class="hero-copy">Continually evolving skill knowledge for robot manipulation, with task-centric and task-skill variants for stable lifelong VLA learning.</p>
+        <div class="hero-actions">
+          <a class="button light" href="https://stellarvla.github.io/">Project page</a>
+          <a class="button outline-light" href="https://arxiv.org/abs/2511.18085">Paper</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="case-grid">
+        <a class="case-card" href="#motivation">
+          <p class="paper-area">01</p>
+          <h3>Motivation</h3>
+          <p>Why continual VLA needs reusable task-skill knowledge rather than growing task modules.</p>
+        </a>
+        <a class="case-card" href="#method">
+          <p class="paper-area">02</p>
+          <h3>Method</h3>
+          <p>T-Stellar and TS-Stellar model task knowledge and task-skill structure for adaptive action routing.</p>
+        </a>
+        <a class="case-card" href="#experiments">
+          <p class="paper-area">03</p>
+          <h3>Experiments</h3>
+          <p>Dual-arm real-robot tasks and LIBERO continual imitation learning evaluations.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="motivation">
+      <div class="page-summary">
+        <div class="section-header">
+          <p class="eyebrow">Motivation</p>
+          <h2>Lifelong robot policies need stable skill memory.</h2>
+        </div>
+        <div>
+          <p>Vision-language-action models can inherit broad manipulation knowledge from pretraining, but efficient continual learning remains difficult. When new tasks arrive sequentially, the robot must adapt without overwriting old behaviours or adding a separate module for every task.</p>
+          <p>Stellar VLA reframes this as knowledge modelling. Instead of treating each task as isolated, the policy learns a compact knowledge space that captures relationships between tasks and skills. That knowledge then guides expert routing for action prediction.</p>
+        </div>
+      </div>
+      <div class="selected-work-grid section-actions">
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/stellar-head.png" alt="Stellar VLA motivation overview" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Overview</p>
+            <h3>Continual robotic manipulation learning</h3>
+            <p>The project studies how VLA agents acquire a sequence of tasks while preserving useful prior knowledge.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/stellar-real-results.png" alt="Stellar VLA real-world success curves" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Real robot evidence</p>
+            <h3>Knowledge retention across tasks</h3>
+            <p>Real-world curves compare continual learning behaviour across seven dual-arm manipulation tasks.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="section-header wide">
+        <p class="eyebrow">Method</p>
+        <h2>Task knowledge, skill structure, and knowledge-guided routing.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/stellar-method.png" alt="Overall architecture of Stellar VLA" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Architecture</p>
+            <h3>Stellar VLA pipeline</h3>
+            <p>Language and visual observations are encoded into task-centric representations, then aligned with a learned knowledge space for action prediction.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/stellar-tsne.png" alt="Stellar VLA learned knowledge space visualization" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Knowledge space</p>
+            <h3>Task and subskill organization</h3>
+            <p>The learned representation exposes task-level clusters and shared subskill relationships in long-horizon manipulation sequences.</p>
+          </div>
+        </article>
+      </div>
+      <div class="case-grid section-actions">
+        <article class="case-card">
+          <p class="paper-area">T-Stellar</p>
+          <h3>Task-centric modelling</h3>
+          <p>The flat variant learns task-relevant knowledge that helps specialize action prediction without expanding the policy for each new task.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">TS-Stellar</p>
+          <h3>Task-skill hierarchy</h3>
+          <p>The hierarchical variant models how tasks share reusable subskills, which is important for long-horizon manipulation.</p>
+        </article>
+        <article class="case-card">
+          <p class="paper-area">Expert routing</p>
+          <h3>Knowledge-guided action head</h3>
+          <p>Semantic embeddings and knowledge relationships guide which motion experts should be emphasized for a given task.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experiments">
+      <div class="section-header wide">
+        <p class="eyebrow">Real-World Experiments</p>
+        <h2>Seven dual-arm manipulation tasks after continual learning.</h2>
+      </div>
+      <div class="project-media-grid">
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-pick-stick.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 01</p><h3>Pick up Stick</h3><p>Grasping a stick with the dual-arm robot setup.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-handover-stick.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 02</p><h3>Handover Stick</h3><p>Coordinated handover behaviour between robot arms.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-pick-bag.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 03</p><h3>Pick up Bag</h3><p>Generalization to deformable or flexible objects.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-handover-toy.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 04</p><h3>Handover Toy</h3><p>Handover with object and scene variation.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-pick-toy-place-plate.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 05</p><h3>Pick Toy Place Plate</h3><p>Pick-and-place with coordinated placement constraints.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-pick-both-object.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 06</p><h3>Pick Both Object</h3><p>Dual-arm coordination with multiple objects.</p></div>
+        </article>
+        <article class="selected-work-card">
+          <video src="../../imgs/research-projects/stellar-pull-stick-from-bag.mp4" autoplay muted loop playsinline controls></video>
+          <div class="selected-work-copy"><p class="paper-area">Task 07</p><h3>Pull Stick from Bag</h3><p>Contact-rich extraction after learning previous tasks.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header wide">
+        <p class="eyebrow">Results</p>
+        <h2>Real-world and simulation evaluations.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/stellar-real-table.png" alt="Stellar VLA real-world success-rate comparison table" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Real world</p>
+            <h3>Success-rate comparison</h3>
+            <p>The real-robot evaluation compares continual manipulation performance across baseline policies and Stellar variants.</p>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../../imgs/research-projects/stellar-sim-results.png" alt="Stellar VLA simulation success-rate results" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Simulation</p>
+            <h3>LIBERO continual learning</h3>
+            <p>Simulation studies cover goal, long-horizon, and multi-task LIBERO settings with limited replay.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="footer-brand">PIRLab.github.io</p>
+      <p>Stellar VLA</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Research Overview</a>
+      <a href="../roboflow4d/index.html">RoboFlow4D</a>
+      <a href="../hear/index.html">HEAR</a>
+      <a href="../../contact/index.html">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
