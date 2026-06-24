@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | PIRLab</title>
+  <meta name="description" content="Research directions at the Physical Intelligence and Robotics Lab: 3D/4D robot vision, world-model-based prediction, and physics-based robot action.">
+  <link rel="icon" type="image/jpg" href="../imgs/UOC_icon.jpg">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body class="page-body">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="PIRLab home">
+      <span class="brand-mark">PIR</span>
+      <span class="brand-text">Physical Intelligence and Robotics Lab</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a class="nav-current" href="index.html" aria-current="page">Research</a>
+      <a href="../papers/index.html">Papers</a>
+      <details class="nav-dropdown">
+        <summary>Groups</summary>
+        <div class="nav-menu">
+          <a href="../cambridge/index.html">Cambridge Robotics Group</a>
+          <a href="../ireland/index.html">Cambridge-Ireland Centre</a>
+          <a href="../sjtu/index.html">SJTU Research Group</a>
+        </div>
+      </details>
+      <a href="../industry/index.html">Industry Application</a>
+      <a href="../join/index.html">Join</a>
+      <a href="../contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="--hero-image: url('../imgs/sem_mapping.gif');">
+      <div class="page-hero-content">
+        <p class="eyebrow">Research</p>
+        <h1>Physical intelligence from perception to action.</h1>
+        <p class="hero-copy">PIRLab studies the full loop of embodied intelligence: rich 3D sensing, predictive world models, and action policies grounded in physical structure.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="page-summary">
+        <div class="section-header">
+          <p class="eyebrow">Overview</p>
+          <h2>Three directions that reinforce one another.</h2>
+        </div>
+        <div>
+          <p>We do not treat perception, prediction, and control as isolated modules. Our research aims to build robot systems in which scene understanding improves forecasting, forecasting improves planning, and action closes the loop back onto better representations.</p>
+          <p>The shared theme is physical realism: models should respect geometry, semantics, dynamics, and contact, and should matter on real robots rather than only on offline benchmarks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="selected-work">
+      <div class="section-header wide">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Representative projects with visual demonstrations.</h2>
+      </div>
+      <div class="selected-work-grid">
+        <article class="selected-work-card">
+          <img src="../imgs/I2Pnet.gif" alt="Image and LiDAR point cloud registration for vehicle localization" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">2D-3D localization</p>
+            <h3>End-to-end 2D-3D Registration between Image and LiDAR Point Cloud</h3>
+            <p>A vehicle localization pipeline that directly aligns image observations with LiDAR point clouds for robust real-world positioning.</p>
+            <div class="link-row"><a href="https://ieeexplore.ieee.org/abstract/document/11078010/">Paper</a><a href="../papers/index.html">Publication list</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/SNI_SLAM.gif" alt="Semantic neural implicit SLAM reconstruction" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Semantic SLAM</p>
+            <h3>SNI-SLAM and SNI-SLAM++</h3>
+            <p>Semantic neural implicit mapping for dense scene reconstruction, tracking, and physically meaningful robot perception.</p>
+            <div class="link-row"><a href="https://arxiv.org/abs/2311.11016">Paper</a><a href="https://github.com/IRMVLab/SNI-SLAM">Code</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/FLOT_compare.gif" alt="3D scene flow auto-labelling comparison" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">3D scene flow</p>
+            <h3>3DSFLabelling and DifFlow3D</h3>
+            <p>Scene-flow learning for dynamic 3D worlds, combining pseudo auto-labelling and uncertainty-aware diffusion refinement.</p>
+            <div class="link-row"><a href="https://arxiv.org/abs/2402.18146">3DSFLabelling</a><a href="https://arxiv.org/abs/2311.17456">DifFlow3D</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/GSRL.gif" alt="Real2Sim2Real robotic manipulation learning with Gaussian splatting" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Robot manipulation</p>
+            <h3>RL-GSBridge</h3>
+            <p>A 3D Gaussian Splatting based Real2Sim2Real method for robotic manipulation learning and sim-to-real transfer.</p>
+            <div class="link-row"><a href="https://arxiv.org/abs/2409.20291">Paper</a><a href="https://github.com/IRMV-Manipulation-Group/RL-GSBridge">Code</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/20_arxiv_3d_odometry.gif" alt="Deep LiDAR odometry in 3D point clouds" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">LiDAR odometry</p>
+            <h3>PWCLO-Net and EfficientLO-Net</h3>
+            <p>Learning-based LiDAR odometry that estimates robust 3D motion from large-scale point clouds.</p>
+            <div class="link-row"><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Wang_PWCLO-Net_Deep_LiDAR_Odometry_in_3D_Point_Clouds_Using_Hierarchical_CVPR_2021_paper.html">PWCLO-Net</a><a href="https://github.com/IRMVLab/EfficientLO-Net">EfficientLO-Net</a></div>
+          </div>
+        </article>
+        <article class="selected-work-card">
+          <img src="../imgs/rlsac.gif" alt="Reinforcement learning enhanced robust estimation" loading="lazy">
+          <div class="selected-work-copy">
+            <p class="paper-area">Robust estimation</p>
+            <h3>RLSAC</h3>
+            <p>Reinforcement learning enhanced sample consensus for end-to-end robust estimation in computer vision and robotics.</p>
+            <div class="link-row"><a href="https://arxiv.org/abs/2308.05318">Paper</a><a href="https://github.com/IRMVLab/RLSAC">Code</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="robot-vision">
+      <div class="section-header wide">
+        <p class="eyebrow">01</p>
+        <h2>3D/4D Robot Vision</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-block">
+          <p>We develop robot perception models that read geometry, semantics, correspondence, and motion from RGB, RGB-D, LiDAR, and multi-modal point clouds. This includes localization, odometry, registration, semantic segmentation, dense mapping, and dynamic scene understanding.</p>
+        </div>
+        <div class="content-block">
+          <p>Typical questions include how to align 2D and 3D observations, how to represent large-scale scenes efficiently, and how to reason about time so that vision becomes 4D rather than a collection of still frames.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="world-models">
+      <div class="section-header wide">
+        <p class="eyebrow">02</p>
+        <h2>World-Model-Based Prediction</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-block">
+          <p>We investigate predictive models that forecast scene flow, semantic evolution, latent map states, and action-conditioned changes in the environment. This includes diffusion models, neural implicit representations, Gaussian scene models, and future-conditioned perception.</p>
+        </div>
+        <div class="content-block">
+          <p>The goal is not just prediction for its own sake. We want world models that make robots plan better, simulate better, recover from partial observability, and transfer learning more effectively between real and virtual environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="robot-action">
+      <div class="section-header wide">
+        <p class="eyebrow">03</p>
+        <h2>Physics-Based Robot Action</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-block">
+          <p>We study how structured perception and predictive models can improve robotic manipulation, robust estimation, and embodied decision making. Our interest is in methods that preserve physical meaning instead of treating action as a purely black-box policy problem.</p>
+        </div>
+        <div class="content-block">
+          <p>Current themes include real-to-sim-to-real learning, contact-rich manipulation, reinforcement learning with priors, and action pipelines built on geometry-aware scene representations.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="footer-brand">PIRLab.github.io</p>
+      <p>Research</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../groups/index.html">Groups</a>
+      <a href="../industry/index.html">Industry Application</a>
+      <a href="../contact/index.html">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
