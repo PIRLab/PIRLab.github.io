@@ -11,8 +11,9 @@
   <meta property="og:image" content="imgs/I2Pnet.gif">
   <link rel="icon" type="image/jpg" href="imgs/UOC_icon.jpg">
   <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home-page">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="PIRLab home">
       <span class="brand-mark">PIR</span>
@@ -46,160 +47,96 @@
   </header>
 
   <main>
-    <section class="hero" style="background-image: url('imgs/I2Pnet.gif');">
-      <div class="hero-content">
-        <p class="eyebrow">PIRLab.github.io</p>
-        <h1>Physical Intelligence and Robotics Lab</h1>
-        <p class="hero-copy">We build robots that perceive dynamic 3D worlds, predict physical futures, and act through models grounded in geometry, semantics, and mechanics.</p>
-        <div class="hero-actions">
-          <a class="button light" href="research/index.html">Research directions</a>
-          <a class="button outline-light" href="groups/index.html">Explore groups</a>
-          <a class="button outline-light" href="industry/index.html">Industry application</a>
+    <section class="home-opening" aria-labelledby="home-title">
+      <div class="home-opening-inner">
+        <div class="home-intro">
+          <p class="home-kicker"><span></span> PHYSICAL INTELLIGENCE &amp; ROBOTICS</p>
+          <h1 id="home-title">Intelligence that <em>moves</em> the world.</h1>
+          <p class="home-deck">We bring together perception, prediction and action to help robots understand and interact with the physical world.</p>
+          <div class="home-links"><a href="research/index.html">Explore our research <span aria-hidden="true">↗</span></a><a href="groups/index.html">Meet our groups <span aria-hidden="true">→</span></a></div>
+        </div>
+        <aside class="home-news" aria-labelledby="latest-news-title">
+          <div class="news-heading"><div><p class="home-label">FROM THE LAB</p><h2 id="latest-news-title">Latest news<span>.</span></h2></div><a href="papers/index.html">All papers ↗</a></div>
+          <ol class="news-list">
+            <li><time datetime="2026-06">JUN <b>2026</b></time><div><span class="news-tag">ECCV 2026</span><p><strong>Congrats!</strong> Our paper on robot localisation has been accepted to ECCV 2026.</p></div></li>
+            <li><time datetime="2026-05">MAY <b>2026</b></time><div><span class="news-tag">ICML 2026</span><p><strong>Congrats!</strong> <a href="research/roboflow4d/index.html">RoboFlow4D</a>, our flow world model for robotic manipulation, has been accepted to ICML 2026.</p></div></li>
+            <li><time datetime="2026-02">FEB <b>2026</b></time><div><span class="news-tag">IEEE TPAMI</span><p><strong>Congrats!</strong> Our paper on SLAM has been accepted to IEEE TPAMI.</p></div></li>
+          </ol>
+        </aside>
+      </div>
+      <div class="home-partners" aria-label="Collaborating institutions">
+        <p>COLLABORATING INSTITUTIONS</p>
+        <div class="partner-logos">
+          <a href="cambridge/index.html" aria-label="Explore our Cambridge group"><img src="imgs/partners/cambridge.svg" alt="University of Cambridge"></a>
+          <a href="ireland/index.html" aria-label="Explore our Ireland group"><img src="imgs/partners/galway.png" alt="University of Galway"></a>
+          <a href="sjtu/index.html" aria-label="Explore our Shanghai Jiao Tong University group"><img class="sjtu-logo" src="imgs/sjtu_icon.png" alt="Shanghai Jiao Tong University"></a>
+          <a href="https://www-smartinfrastructure.eng.cam.ac.uk/" aria-label="Cambridge Centre for Smart Infrastructure and Construction">
+            <svg class="partner-screenshot-logo" viewBox="70 35 600 155" role="img" aria-label="Cambridge Centre for Smart Infrastructure and Construction logo"><image href="imgs/partners/collaborating-centres.png" width="1860" height="224" /></svg>
+          </a>
+          <a href="https://www.construction.cam.ac.uk/" aria-label="Cambridge Laing O’Rourke Centre for Construction Engineering and Technology">
+            <svg class="partner-screenshot-logo" viewBox="750 25 710 170" role="img" aria-label="Laing O’Rourke Centre for Construction Engineering and Technology logo"><image href="imgs/partners/collaborating-centres.png" width="1860" height="224" /></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section intro">
-      <div class="section-header">
-        <p class="eyebrow">Mission</p>
-        <h2>Robotic intelligence should understand the physical world before it moves in it.</h2>
+    <section class="section featured-research" aria-labelledby="featured-research-title">
+      <div class="featured-heading">
+        <div><p class="eyebrow">Research in motion</p><h2 id="featured-research-title">Representative work.</h2></div>
+        <a class="featured-all" href="papers/index.html">View all publications <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="intro-copy">
-        <p>PIRLab is led by Guangming Wang and connects research activity across Cambridge, Ireland, and Shanghai Jiao Tong University. Our work sits at the intersection of robot vision, embodied AI, world models, 3D reconstruction, and robot learning.</p>
-        <p>We focus on compact ideas with practical force: rich 3D/4D perception, predictive models of scene dynamics, and physically meaningful action policies for mobile robots, manipulation, construction automation, and digital twins.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-header wide">
-        <p class="eyebrow">Research</p>
-        <h2>Three directions, one physical intelligence stack.</h2>
-      </div>
-      <div class="research-grid">
-        <article class="research-card">
-          <img src="imgs/sem_mapping.gif" alt="Semantic neural mapping result" loading="lazy">
-          <div>
-            <span class="topic-index">01</span>
-            <h3>3D/4D Robot Vision</h3>
-            <p>Learning geometry, motion, semantics, and localization from cameras, LiDAR, point clouds, neural fields, and 4D observations.</p>
-            <a href="research/index.html#robot-vision">Read more</a>
+      <div class="featured-list">
+        <article class="featured-paper">
+          <div class="featured-media"><video src="imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline preload="metadata" aria-label="RoboFlow4D robot placing one cup inside another"></video></div>
+          <div class="featured-copy">
+            <a class="featured-venue" href="https://arxiv.org/abs/2605.17522">ICML 2026 <span aria-hidden="true">↗</span></a>
+            <h3><a href="https://arxiv.org/abs/2605.17522">RoboFlow4D</a></h3>
+            <p>A lightweight flow world model predicts 3D motion to guide real-time robotic manipulation.</p>
+            <div class="featured-resources"><a href="https://simonlinsx.github.io/RoboFlow4D_Page/" aria-label="RoboFlow4D project details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg><span>Project</span></a><a href="https://github.com/Simonlinsx/RoboFlow4D" aria-label="RoboFlow4D GitHub repository"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.12c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.25-1.63-1.25-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15A10.6 10.6 0 0 1 12 6.16c.94 0 1.88.13 2.76.37 2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.22 2.68.11 2.96.72.78 1.15 1.78 1.15 3.01 0 4.28-2.61 5.21-5.09 5.49.4.35.75 1.02.75 2.06V22c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span></a></div>
           </div>
         </article>
-        <article class="research-card">
-          <video src="imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline aria-label="RoboFlow4D real robot flow-guided manipulation"></video>
-          <div>
-            <span class="topic-index">02</span>
-            <h3>World-Model-Based Prediction</h3>
-            <p>Building predictive models that forecast scene flow, map evolution, future observations, and action-conditioned physical change.</p>
-            <a href="research/roboflow4d/index.html">Read more</a>
+        <article class="featured-paper">
+          <div class="featured-media"><img src="imgs/sem_mapping.gif" alt="SNI-SLAM semantic mapping visualization" loading="lazy"></div>
+          <div class="featured-copy">
+            <a class="featured-venue" href="https://arxiv.org/abs/2311.11016">CVPR 2024 <span aria-hidden="true">↗</span></a>
+            <h3><a href="https://arxiv.org/abs/2311.11016">SNI-SLAM</a></h3>
+            <p>Semantic neural implicit representations bring together dense mapping and tracking for 3D scene understanding.</p>
+            <div class="featured-resources"><a href="research/index.html#sni-slam" aria-label="SNI-SLAM project details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg><span>Project</span></a><a href="https://github.com/IRMVLab/SNI-SLAM" aria-label="SNI-SLAM GitHub repository"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.12c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.25-1.63-1.25-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15A10.6 10.6 0 0 1 12 6.16c.94 0 1.88.13 2.76.37 2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.22 2.68.11 2.96.72.78 1.15 1.78 1.15 3.01 0 4.28-2.61 5.21-5.09 5.49.4.35.75 1.02.75 2.06V22c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span></a></div>
           </div>
         </article>
-        <article class="research-card">
-          <video src="imgs/research-projects/stellar-pick-stick.mp4" autoplay muted loop playsinline aria-label="Stellar VLA continual manipulation learning"></video>
-          <div>
-            <span class="topic-index">03</span>
-            <h3>Physics-Based Robot Action</h3>
-            <p>Translating perception and prediction into contact-rich manipulation, real-to-sim-to-real learning, robust estimation, and efficient control.</p>
-            <a href="research/stellar-vla/index.html">Read more</a>
+        <article class="featured-paper">
+          <div class="featured-media"><img src="imgs/GSRL.gif" alt="RL-GSBridge robot manipulation demonstration" loading="lazy"></div>
+          <div class="featured-copy">
+            <a class="featured-venue" href="https://arxiv.org/abs/2409.20291">ICRA 2025 <span aria-hidden="true">↗</span></a>
+            <h3><a href="https://arxiv.org/abs/2409.20291">RL-GSBridge</a></h3>
+            <p>Gaussian splatting connects simulation and reality to support robot manipulation learning.</p>
+            <div class="featured-resources"><a href="research/index.html#rl-gsbridge" aria-label="RL-GSBridge project details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg><span>Project</span></a><a href="https://github.com/IRMV-Manipulation-Group/RL-GSBridge" aria-label="RL-GSBridge GitHub repository"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.12c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.25-1.63-1.25-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15A10.6 10.6 0 0 1 12 6.16c.94 0 1.88.13 2.76.37 2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.22 2.68.11 2.96.72.78 1.15 1.78 1.15 3.01 0 4.28-2.61 5.21-5.09 5.49.4.35.75 1.02.75 2.06V22c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span></a></div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section split">
-      <div class="section-header">
-        <p class="eyebrow">Lead</p>
-        <h2>Guangming Wang</h2>
-      </div>
-      <div class="leader">
-        <img src="imgs/Guangming2.jpg" alt="Guangming Wang" loading="lazy">
-        <div>
-          <p>Guangming Wang is an Assistant Professor at the School of Engineering, University of Galway, Cambridge-Ireland International Centre, and a Research Associate in the Department of Engineering at the University of Cambridge. He received his PhD from the Intelligent Robotics and Machine Vision Lab at Shanghai Jiao Tong University.</p>
-          <p>He serves as Associate Editor for IEEE RA-L, ICRA, and IROS, and was awarded the Best Associate Editor Award of ICRA 2026. His research connects robot perception, localization, mapping, world modeling, and robot manipulation.</p>
-          <div class="link-row">
-            <a href="mailto:gw462@cam.ac.uk">Email</a>
-            <a href="https://scholar.google.com.hk/citations?user=GGHfHSIAAAAJ&hl=en">Google Scholar</a>
+    <section class="home-explore" aria-label="Explore PIRLab">
+      <div class="home-explore-inner">
+        <article class="explore-industry">
+          <div class="explore-image"><img src="imgs/industry.jpg" alt="Industrial robotic arm in a workshop" loading="lazy"></div>
+          <div class="explore-copy"><p class="home-label">INDUSTRY APPLICATION</p><h2>From research to the real world.</h2><p>Robotics for mobility, manipulation and construction.</p><a href="industry/index.html">Explore applications <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <section class="explore-groups" aria-labelledby="explore-groups-title">
+          <div class="explore-group-heading"><div><p class="home-label">OUR GROUPS</p><h2 id="explore-groups-title">One lab, three research homes.</h2></div><a href="groups/index.html">All groups ↗</a></div>
+          <div class="explore-group-list">
+            <a href="cambridge/index.html"><img src="imgs/partners/cambridge.svg" alt=""><span><strong>Cambridge</strong><small>Robotics Group</small></span><b aria-hidden="true">↗</b></a>
+            <a href="ireland/index.html"><img src="imgs/partners/galway.png" alt=""><span><strong>Ireland</strong><small>Cambridge-Ireland Centre</small></span><b aria-hidden="true">↗</b></a>
+            <a href="sjtu/index.html"><img class="explore-sjtu" src="imgs/sjtu_icon.png" alt=""><span><strong>Shanghai</strong><small>SJTU Research Group</small></span><b aria-hidden="true">↗</b></a>
           </div>
-        </div>
+        </section>
+        <article class="explore-join">
+          <div class="explore-join-copy"><p class="home-label">JOIN THE LAB</p><h2>Curious about what robots can do?</h2><p>Build the next generation of physical intelligence with us.</p><a href="join/index.html">Explore opportunities <span aria-hidden="true">↗</span></a></div>
+          <video src="imgs/research-projects/stellar-pick-stick.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Robot arm manipulating an object"></video>
+        </article>
       </div>
     </section>
 
-    <section class="section split">
-      <div class="section-header">
-        <p class="eyebrow">Papers</p>
-        <h2>The publication page is now a clean CV-based paper list.</h2>
-      </div>
-      <div class="callout">
-        <p>Papers are listed as citations only, while media-rich selected work is shown on the Research page.</p>
-        <a class="button dark" href="papers/index.html">View papers</a>
-      </div>
-    </section>
-
-    <section class="section split">
-      <div class="section-header">
-        <p class="eyebrow">Industry Application</p>
-        <h2>Three application modules for deployable physical intelligence.</h2>
-      </div>
-      <div class="callout">
-        <p>Industry applications are organized into autonomous mobile robots/autonomous driving, robot brain and embodied intelligence/VLA, and industrial autonomous robots for construction automation.</p>
-        <a class="button dark" href="industry/index.html">View applications</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-header wide">
-        <p class="eyebrow">Groups</p>
-        <h2>Three connected research homes.</h2>
-      </div>
-      <div class="group-grid">
-        <a class="group-card" href="cambridge/index.html">
-          <span>Cambridge</span>
-          <h3>Cambridge Robotics Group</h3>
-          <p>3D robot perception, localization, mapping, construction automation, and embodied physical intelligence.</p>
-        </a>
-        <a class="group-card" href="ireland/index.html">
-          <span>Ireland</span>
-          <h3>Cambridge-Ireland International Centre Research Group</h3>
-          <p>World models, predictive robot vision, physical AI, and international collaboration across Cambridge and Ireland.</p>
-        </a>
-        <a class="group-card" href="sjtu/index.html">
-          <span>SJTU</span>
-          <h3>Shanghai Jiao Tong University Research Group</h3>
-          <p>Long-running research roots in robot vision, LiDAR odometry, 3D scene flow, and manipulation learning.</p>
-        </a>
-      </div>
-      <div class="hero-actions section-actions">
-        <a class="button dark" href="groups/index.html">View all groups</a>
-      </div>
-    </section>
-
-    <section class="section split">
-      <div class="section-header">
-        <p class="eyebrow">Join</p>
-        <h2>We welcome students who want to build physical intelligence.</h2>
-      </div>
-      <div class="callout">
-        <p>PIRLab is open to highly motivated PhD, MPhil, research assistant, and visiting student applicants.</p>
-        <a class="button dark" href="join/index.html">Join PIRLab</a>
-      </div>
-    </section>
-
-    <section class="section news">
-      <div class="section-header">
-        <p class="eyebrow">News</p>
-        <h2>Recent highlights</h2>
-      </div>
-      <ul class="timeline">
-        <li><time>2026.06</time><span>One paper on robot localisation accepted by ECCV 2026.</span></li>
-        <li><time>2026.05</time><span>One paper on world model accepted by ICML 2026.</span></li>
-        <li><time>2025.09</time><span>Invited talk on World Models at the ASPIRE Computer Vision Workshop at Oxford VGG.</span></li>
-        <li><time>2026.02</time><span>One SLAM paper accepted by IEEE TPAMI.</span></li>
-        <li><time>2026.01</time><span>One robot manipulation paper accepted by ICRA 2026.</span></li>
-        <li><time>2025.11</time><span>One paper on SLAM accepted by AAAI 2026.</span></li>
-        <li><time>2025.09</time><span>Invited talk on Real2Sim2Real at the Cambridge Computer Vision Workshop.</span></li>
-        <li><time>2025.07</time><span>NeRF in Robotics survey accepted by IJRR.</span></li>
-      </ul>
-    </section>
   </main>
 
   <footer class="site-footer">

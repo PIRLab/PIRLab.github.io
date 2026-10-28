@@ -1034,3 +1034,78 @@ h3 {
     justify-content: flex-start;
   }
 }
+
+/* Shared navigation and PIRLab identity. */
+.site-header {
+  min-height: 82px;
+  gap: 28px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #dfe3da;
+  background: rgba(249, 248, 243, .97);
+}
+.brand { flex: 0 0 auto; gap: 11px; }
+.brand-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 50px;
+  border: 0;
+  border-radius: 2px;
+  background: #263a30;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -.07em;
+  padding-right: 7px;
+}
+.brand-mark::after {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d59079;
+  content: '';
+}
+.brand-text {
+  max-width: 220px;
+  white-space: normal;
+  overflow: visible;
+  color: #2a3930;
+  font-size: .94rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.site-nav { gap: clamp(12px, 1.5vw, 21px); color: #5b665e; font-size: .81rem; font-weight: 650; }
+.site-nav > a, .nav-dropdown summary { position: relative; min-height: 40px; white-space: nowrap; }
+.site-nav > a:hover, .site-nav > a:focus-visible, .nav-dropdown summary:hover, .nav-dropdown summary:focus-visible { color: #9d4e3e; }
+.site-nav > .nav-current, .nav-dropdown summary.nav-current { color: #263a30; }
+.site-nav > .nav-current::after, .nav-dropdown summary.nav-current::before {
+  position: absolute; right: 0; bottom: 1px; left: 0; height: 2px; background: #bd6955; content: '';
+}
+.nav-dropdown summary::after { border-top-width: 4px; border-right-width: 3px; border-left-width: 3px; }
+.nav-menu { top: calc(100% + 4px); border: 1px solid #dce3da; border-radius: 2px; background: #fbfaf7; box-shadow: 0 12px 30px rgba(38, 58, 48, .12); }
+.nav-menu a { border-radius: 0; }
+.nav-menu a.nav-current { color: #9d4e3e; }
+@media (max-width: 1100px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 8px; padding: 12px 24px; }
+  .site-nav { width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 6px 17px; padding-bottom: 0; }
+  .site-nav > a, .nav-dropdown summary { min-height: 32px; }
+}
+@media (max-width: 640px) {
+  .site-header { position: relative; gap: 8px; padding: 12px 16px 10px; }
+  .brand-mark { width: 68px; height: 46px; font-size: 1.5rem; }
+  .brand-mark::after { right: 7px; bottom: 9px; }
+  .brand-text { max-width: 205px; font-size: .94rem; }
+  .site-nav { gap: 2px 15px; font-size: .75rem; }
+  .site-nav > a, .nav-dropdown summary { min-height: 32px; }
+}
+@media (max-width: 1100px) {
+  .site-nav > .nav-dropdown:last-of-type .nav-menu { left: auto; right: 0; }
+}
