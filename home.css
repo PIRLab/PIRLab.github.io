@@ -174,3 +174,10 @@ a.community-item:hover, a.community-item:focus-visible { background: #edf0e9; pa
  .partner-set[aria-hidden="true"] { display: none; }
  .community-item { transition: none; }
 }
+
+/* One continuous, full-width strip of partner marks. */
+.home-partners .partner-line { display: block; position: relative; width: 100vw; left: 50%; transform: translateX(-50%); padding: 8px 0; border-top: 1px solid #dfe3da; border-bottom: 1px solid #dfe3da; }
+.home-partners .partner-window { width: 100%; background: transparent; }
+.home-partners .partner-track { animation: partners-scroll 150s linear infinite; }
+.home-partners .partner-logo img { mix-blend-mode: multiply; }
+@media (prefers-reduced-motion: reduce) { .home-partners .partner-track { animation: none; } }
