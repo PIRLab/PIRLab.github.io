@@ -181,3 +181,16 @@ a.community-item:hover, a.community-item:focus-visible { background: #edf0e9; pa
 .home-partners .partner-track { animation: partners-scroll 150s linear infinite; }
 .home-partners .partner-logo img { mix-blend-mode: multiply; }
 @media (prefers-reduced-motion: reduce) { .home-partners .partner-track { animation: none; } }
+
+/* Keep the logos moving without showing a browser scrollbar. */
+.home-partners .partner-line { mix-blend-mode: multiply; }
+.home-partners .partner-window { overflow: hidden; scrollbar-width: none; }
+.home-partners .partner-window::-webkit-scrollbar { display: none; }
+.home-partners .partner-track,
+.home-partners .partner-window:hover .partner-track,
+.home-partners .partner-window:focus .partner-track,
+.home-partners .partner-window:focus-within .partner-track { animation-play-state: running; }
+.home-partners .partner-logo img { mix-blend-mode: normal; }
+@media (prefers-reduced-motion: reduce) {
+  .home-partners .partner-window { overflow-x: auto; }
+}
