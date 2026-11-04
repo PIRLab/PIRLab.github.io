@@ -1185,3 +1185,25 @@ h3 {
 @media (min-width: 641px) {
   .site-nav > .nav-dropdown:last-of-type .nav-menu { left: 0; right: auto; }
 }
+
+/* PIRLab palette inspired by Cambridge's blue and crest colours. */
+:root {
+  --ink: #232830;
+  --muted: #546072;
+  --paper: #f5f8f8;
+  --surface: #ffffff;
+  --line: #d9e4e5;
+  --red: #a4384b;
+  --teal: #12626b;
+  --green: #12626b;
+  --blue: #175a71;
+  --pir-navy: #133844;
+  --pir-cambridge-blue: #8ee8d8;
+  --pir-light-blue: #e8f4f2;
+  --pir-crest: #a4384b;
+}
+.brand-mark { background: var(--pir-navy); border-color: var(--pir-navy); }
+.brand-mark::after { background: var(--pir-cambridge-blue); }
+.brand-text { color: var(--pir-navy); }
+.site-nav { color: #344653; }
+.nav-menu { border-top-color: var(--pir-crest); }
