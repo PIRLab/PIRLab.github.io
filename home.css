@@ -198,17 +198,15 @@ a.community-item:hover, a.community-item:focus-visible { background: #edf0e9; pa
 /* Preserve the full wide video frame in the Join section. */
 .explore-join video { object-fit: contain; background: #283930; }
 
-/* Give the full-width video its natural panoramic proportions. */
-.explore-join { grid-template-columns: minmax(0, 1fr); min-height: 0; }
-.explore-join-copy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); column-gap: 48px; align-items: start; padding: 31px clamp(28px, 4vw, 54px) 34px; }
-.explore-join-copy .home-label { grid-column: 1 / -1; }
-.explore-join-copy h2 { grid-column: 1; grid-row: 2 / 4; }
-.explore-join-copy p:not(.home-label) { grid-column: 2; grid-row: 2; margin: 0 0 10px; }
-.explore-join-copy > a { grid-column: 2; grid-row: 3; justify-self: start; }
-.explore-join video { display: block; width: 100%; height: auto; max-height: none; aspect-ratio: 3 / 1; object-fit: contain; order: 0; }
-@media (max-width: 680px) {
-  .explore-join-copy { grid-template-columns: 1fr; gap: 0; padding: 28px 25px; }
-  .explore-join-copy h2, .explore-join-copy p:not(.home-label), .explore-join-copy > a { grid-column: 1; grid-row: auto; }
-  .explore-join-copy p:not(.home-label) { margin: 11px 0 12px; }
-  .explore-join video { height: auto; order: 0; }
+/* A side-by-side Join card with the original panoramic video. */
+.explore-join { grid-template-columns: minmax(0, .68fr) minmax(0, 1.32fr); min-height: 0; align-items: stretch; }
+.explore-join-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 18px clamp(22px, 2.5vw, 36px); }
+.explore-join-copy h2 { font-size: clamp(1.65rem, 2.3vw, 2.15rem); }
+.explore-join-copy .home-label { margin-bottom: 6px; }
+.explore-join-copy p:not(.home-label) { margin: 8px 0 10px; font-size: .78rem; line-height: 1.4; }
+.explore-join video { display: block; width: 100%; height: 100%; max-height: none; aspect-ratio: 3 / 1; object-fit: contain; order: 0; }
+@media (max-width: 900px) {
+  .explore-join { grid-template-columns: 1fr; }
+  .explore-join-copy { padding: 28px 25px; }
+  .explore-join video { width: 100%; height: auto; order: 0; }
 }
