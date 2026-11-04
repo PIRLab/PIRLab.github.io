@@ -210,3 +210,19 @@ a.community-item:hover, a.community-item:focus-visible { background: #edf0e9; pa
   .explore-join-copy { padding: 28px 25px; }
   .explore-join video { width: 100%; height: auto; order: 0; }
 }
+
+/* Photo-led opening with a translucent colour layer behind the introduction. */
+.home-opening-banner { background: linear-gradient(90deg, rgba(24, 48, 48, .94) 0%, rgba(30, 57, 56, .82) 48%, rgba(27, 50, 50, .70) 100%), url('imgs/industry.jpg') center 48% / cover no-repeat; }
+.home-opening-banner .home-kicker { color: #f0cfc2; }
+.home-opening-banner .home-kicker span { background: #e2ac98; }
+.home-opening-banner .home-intro h1 { color: #fff; }
+.home-opening-banner .home-intro h1 em { color: #f0c1ad; }
+.home-opening-banner .home-deck { color: #eef1ea; }
+.home-opening-banner .home-links { color: #fff; }
+.home-opening-banner .home-links a { border-color: #dba58f; }
+.home-opening-banner .home-links a:hover, .home-opening-banner .home-links a:focus-visible { color: #f1c6b5; }
+.home-opening-banner .home-links span { color: #efb7a2; }
+.home-opening-banner .home-news { background: rgba(255, 255, 255, .97); }
+@media (max-width: 680px) {
+  .home-opening-banner { background-position: 57% center; }
+}
