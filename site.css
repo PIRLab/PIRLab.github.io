@@ -1175,3 +1175,13 @@ h3 {
   .site-nav { gap: 1px 16px; font-size: .75rem; }
   .site-nav > a, .nav-dropdown summary { min-height: 34px; }
 }
+
+/* The dropdown starts under its heading; keep the text crisp over a soft surface. */
+.nav-menu { left: 0; right: auto; background: rgba(255, 255, 255, .91); backdrop-filter: blur(14px); }
+.nav-menu a { font-weight: 400; }
+@media (max-width: 640px) {
+  .site-nav > .nav-dropdown:last-of-type .nav-menu { left: auto; right: 0; }
+}
+@media (min-width: 641px) {
+  .site-nav > .nav-dropdown:last-of-type .nav-menu { left: 0; right: auto; }
+}
