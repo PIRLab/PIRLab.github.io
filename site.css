@@ -1207,3 +1207,22 @@ h3 {
 .brand-text { color: var(--pir-navy); }
 .site-nav { color: #344653; }
 .nav-menu { border-top-color: var(--pir-crest); }
+
+/* Group affiliations */
+.affiliations {
+  display: grid;
+  grid-template-columns: minmax(150px, .8fr) 2fr;
+  gap: 18px 32px;
+  margin: 36px 0;
+  padding: 24px 0;
+  border-top: 1px solid #d9e2e2;
+  border-bottom: 1px solid #d9e2e2;
+}
+.affiliations h2 { margin: 0; color: #133844; font-size: 1rem; }
+.affiliations ul { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.affiliations li { color: #344653; line-height: 1.5; }
+.affiliations a { color: #133844; text-decoration: underline; text-decoration-color: #8acfc4; text-underline-offset: 4px; }
+.affiliations a:hover, .affiliations a:focus-visible { color: #a4384b; }
+@media (max-width: 640px) {
+  .affiliations { grid-template-columns: 1fr; gap: 12px; }
+}
