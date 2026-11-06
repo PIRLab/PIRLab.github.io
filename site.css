@@ -1226,3 +1226,48 @@ h3 {
 @media (max-width: 640px) {
   .affiliations { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* Compact editorial layout for interior pages. */
+.page-body .page-hero {
+  min-height: 290px;
+  padding: 52px max(24px, calc((100vw - 1180px) / 2)) 48px;
+  align-items: center;
+  background-position: center;
+}
+.page-body .page-hero::before {
+  background: linear-gradient(90deg, rgba(19, 56, 68, .96) 0%, rgba(19, 56, 68, .89) 42%, rgba(19, 56, 68, .50) 100%);
+}
+.page-body .page-hero-content { width: min(760px, 100%); }
+.page-body .page-hero .eyebrow { margin-bottom: 12px; color: #8ee8d8; letter-spacing: .08em; }
+.page-body .page-hero h1 {
+  max-width: 760px;
+  margin-bottom: 14px;
+  font-size: clamp(1.85rem, 2.7vw, 2.55rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+.page-body .page-hero .hero-copy {
+  max-width: 670px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.page-body .page-hero .hero-actions { margin-top: 22px; }
+.page-body .section { padding-top: 56px; padding-bottom: 56px; }
+.page-body .section h2 { font-size: clamp(1.5rem, 2.25vw, 2rem); line-height: 1.2; }
+.page-body .section .affiliations h2 { font-size: 1rem; }
+.page-body .section h3 { font-size: 1.12rem; line-height: 1.3; }
+.page-body .section-header.wide { margin-bottom: 26px; }
+.page-body .page-summary { grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr); gap: 40px; }
+.page-body .focus-item { padding: 20px; }
+@media (max-width: 940px) {
+  .page-body .page-summary { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 640px) {
+  .page-body .page-hero { min-height: 230px; padding: 38px 20px; }
+  .page-body .page-hero h1 { font-size: clamp(1.7rem, 7vw, 2rem); }
+  .page-body .page-hero .hero-copy { font-size: .95rem; }
+  .page-body .section { padding-top: 40px; padding-bottom: 40px; }
+  .page-body .section h2 { font-size: 1.5rem; }
+}
