@@ -1147,7 +1147,7 @@ h3 {
 }
 .brand-name { display: block; white-space: nowrap; }
 .brand-name b { color: #a4384b; font-weight: 800; }
-.site-nav { gap: clamp(15px, 1.65vw, 25px); color: #303b45; font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Arial, sans-serif; font-size: .82rem; font-weight: 650; }
+.site-nav { gap: clamp(15px, 1.65vw, 25px); color: #303b45; font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Arial, sans-serif; font-size: .95rem; font-weight: 650; }
 .site-nav > a, .nav-dropdown summary { min-height: 46px; }
 .site-nav > a:hover, .site-nav > a:focus-visible, .nav-dropdown summary:hover, .nav-dropdown summary:focus-visible { color: #a4384b; }
 .site-nav > .nav-current, .nav-dropdown summary.nav-current { color: #a4384b; }
@@ -1156,7 +1156,7 @@ h3 {
 .nav-dropdown summary::after { border-top-color: currentColor; transition: transform .2s ease; }
 .nav-dropdown[open] summary::after { transform: rotate(180deg); }
 .nav-menu { top: 100%; min-width: 238px; padding: 9px 0; border: 1px solid #e5e8ea; border-top: 3px solid #a4384b; background: #fff; box-shadow: 0 14px 35px rgba(26, 39, 51, .13); }
-.nav-menu a { padding: 10px 17px; color: #344657; font-size: .78rem; line-height: 1.35; }
+.nav-menu a { padding: 10px 17px; color: #344657; font-size: .875rem; line-height: 1.35; }
 .nav-menu a:hover, .nav-menu a:focus-visible { color: #a4384b; background: #f7f4f4; }
 @media (hover: hover) {
   .nav-dropdown:hover summary { color: #a4384b; }
@@ -1172,7 +1172,7 @@ h3 {
   .brand-mark { width: 52px; height: 52px; flex-basis: 52px; font-size: 1.2rem; }
   .brand-mark::after { width: 25px; right: 13px; bottom: 9px; }
   .brand-text { max-width: none; font-size: .76rem; }
-  .site-nav { gap: 1px 16px; font-size: .75rem; }
+  .site-nav { gap: 1px 16px; font-size: .875rem; }
   .site-nav > a, .nav-dropdown summary { min-height: 34px; }
 }
 
