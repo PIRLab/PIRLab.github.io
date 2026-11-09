@@ -1271,3 +1271,11 @@ h3 {
   .page-body .section { padding-top: 40px; padding-bottom: 40px; }
   .page-body .section h2 { font-size: 1.5rem; }
 }
+
+/* Compact interior-page topics. */
+.page-body .topic-icon { display: block; width: 38px; height: 38px; margin-bottom: 17px; padding: 8px; color: #17606b; background: #e3f3ef; border-radius: 9px; }
+.page-body .direction-card { min-height: 0; padding: 24px; }
+.page-body .overview-copy { display: block; max-width: 720px; margin-bottom: 22px; }
+.page-body .overview-copy p:last-child { margin-bottom: 0; }
+.page-body .focus-item .topic-icon { margin-bottom: 14px; }
+.page-body .case-card .topic-icon { margin-bottom: 15px; }
