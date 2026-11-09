@@ -6,7 +6,7 @@
   <title>Research | PIRLab</title>
   <meta name="description" content="Research directions at the Physical Intelligence and Robotics Lab: 3D/4D robot vision, world-model-based prediction, and physics-based robot action.">
   <link rel="icon" type="image/jpg" href="../imgs/UOC_icon.jpg">
-  <link rel="stylesheet" href="../site.css?v=interior-content-20261108">
+  <link rel="stylesheet" href="../site.css?v=overview-20261108">
   <script src="../nav.js" defer></script>
 </head>
 <body class="page-body">
@@ -47,42 +47,38 @@
       <div class="page-hero-content">
         <p class="eyebrow">Research</p>
         <h1>Physical intelligence from perception to action.</h1>
-        <p class="hero-copy">PIRLab studies the full loop of embodied intelligence: rich 3D sensing, predictive world models, and action policies grounded in physical structure.</p>
+        <p class="hero-copy">From robot vision and world models to physically grounded action.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="section-header wide">
         <p class="eyebrow">Overview</p>
-        <h2>Three main directions form one physical intelligence loop.</h2>
-      </div>
-      <div class="overview-copy">
-        <p>Perception, prediction, and action form one connected loop.</p>
-
+        <h2>Perception. Prediction. Action.</h2>
       </div>
       <div class="direction-flow" aria-label="Research direction sequence">
-        <a class="direction-card" href="#robot-vision">
+        <div class="direction-card" id="robot-vision">
           <svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg>
           <h3>3D/4D Robot Vision</h3>
-          <p>Geometry, semantics, mapping, and motion from cameras and LiDAR.</p>
-        </a>
-        <a class="direction-card" href="#world-models">
+          <p>Geometry · Mapping · Motion</p>
+        </div>
+        <div class="direction-card" id="world-models">
           <svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="m8 11 8-4M8 13l8 4"/></svg>
           <h3>World-Model-Based Prediction</h3>
-          <p>Predict scene flow, future observations, and action-conditioned change.</p>
-        </a>
-        <a class="direction-card" href="#robot-action">
+          <p>Scene flow · Dynamics · World models</p>
+        </div>
+        <div class="direction-card" id="robot-action">
           <svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13h7V5l7 7-7 7v-6H5z"/></svg>
           <h3>Physics-Based Robot Action</h3>
-          <p>Prediction becomes action: manipulation, VLA policies, robust estimation, and physically grounded robot control.</p>
-        </a>
+          <p>Manipulation · VLA · Robot control</p>
+        </div>
       </div>
     </section>
 
     <section class="section" id="embodied-world-models">
       <div class="section-header wide">
         <p class="eyebrow">Embodied Intelligence</p>
-        <h2>Featured VLA and world-model projects.</h2>
+        <h2>Featured projects.</h2>
       </div>
       <div class="selected-work-grid three">
         <article class="selected-work-card">
@@ -90,7 +86,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">Continual VLA</p>
             <h3>Stellar VLA</h3>
-            <p>Continual skill knowledge for robot manipulation, connecting task memory with vision-language-action policies.</p>
+            <p>Continual learning for robot manipulation.</p>
             <div class="link-row"><a href="stellar-vla/index.html">Local page</a><a href="https://stellarvla.github.io/">Project page</a></div>
           </div>
         </article>
@@ -99,7 +95,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">Flow world model</p>
             <h3>RoboFlow4D</h3>
-            <p>A lightweight 4D flow world model for real-time, flow-guided robotic manipulation.</p>
+            <p>4D flow prediction for robot manipulation.</p>
             <div class="link-row"><a href="roboflow4d/index.html">Local page</a><a href="https://simonlinsx.github.io/RoboFlow4D_Page/">Project page</a></div>
           </div>
         </article>
@@ -108,7 +104,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">VSLA</p>
             <h3>HEAR</h3>
-            <p>A Vision-Sound-Language-Action framework for robots that use acoustic cues during manipulation.</p>
+            <p>Sound-aware robot manipulation.</p>
             <div class="link-row"><a href="hear/index.html">Local page</a><a href="https://hear.irmv.top/">Project page</a></div>
           </div>
         </article>
@@ -118,7 +114,7 @@
     <section class="section" id="selected-work">
       <div class="section-header wide">
         <p class="eyebrow">Selected Work</p>
-        <h2>Representative projects with visual demonstrations.</h2>
+        <h2>Representative work.</h2>
       </div>
       <div class="selected-work-grid">
         <article class="selected-work-card">
@@ -126,7 +122,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">2D-3D localization</p>
             <h3>End-to-end 2D-3D Registration between Image and LiDAR Point Cloud</h3>
-            <p>A vehicle localization pipeline that directly aligns image observations with LiDAR point clouds for robust real-world positioning.</p>
+            <p>Image–LiDAR registration for vehicle localization.</p>
             <div class="link-row"><a href="https://ieeexplore.ieee.org/abstract/document/11078010/">Paper</a><a href="../papers/index.html">Publication list</a></div>
           </div>
         </article>
@@ -135,7 +131,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">Semantic SLAM</p>
             <h3>SNI-SLAM and SNI-SLAM++</h3>
-            <p>Semantic neural implicit mapping for dense scene reconstruction, tracking, and physically meaningful robot perception.</p>
+            <p>Semantic mapping and 3D scene reconstruction.</p>
             <div class="link-row"><a href="https://arxiv.org/abs/2311.11016">Paper</a><a href="https://github.com/IRMVLab/SNI-SLAM">Code</a></div>
           </div>
         </article>
@@ -144,7 +140,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">3D scene flow</p>
             <h3>3DSFLabelling and DifFlow3D</h3>
-            <p>Scene-flow learning for dynamic 3D worlds, combining pseudo auto-labelling and uncertainty-aware diffusion refinement.</p>
+            <p>3D scene flow with auto-labelling and diffusion.</p>
             <div class="link-row"><a href="https://arxiv.org/abs/2402.18146">3DSFLabelling</a><a href="https://arxiv.org/abs/2311.17456">DifFlow3D</a></div>
           </div>
         </article>
@@ -153,7 +149,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">Robot manipulation</p>
             <h3>RL-GSBridge</h3>
-            <p>A 3D Gaussian Splatting based Real2Sim2Real method for robotic manipulation learning and sim-to-real transfer.</p>
+            <p>Gaussian splatting for real-to-sim-to-real manipulation.</p>
             <div class="link-row"><a href="https://arxiv.org/abs/2409.20291">Paper</a><a href="https://github.com/IRMV-Manipulation-Group/RL-GSBridge">Code</a></div>
           </div>
         </article>
@@ -162,7 +158,7 @@
           <div class="selected-work-copy">
             <p class="paper-area">LiDAR odometry</p>
             <h3>PWCLO-Net and EfficientLO-Net</h3>
-            <p>Learning-based LiDAR odometry that estimates robust 3D motion from large-scale point clouds.</p>
+            <p>Learning-based LiDAR odometry.</p>
             <div class="link-row"><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Wang_PWCLO-Net_Deep_LiDAR_Odometry_in_3D_Point_Clouds_Using_Hierarchical_CVPR_2021_paper.html">PWCLO-Net</a><a href="https://github.com/IRMVLab/EfficientLO-Net">EfficientLO-Net</a></div>
           </div>
         </article>
@@ -171,57 +167,13 @@
           <div class="selected-work-copy">
             <p class="paper-area">Robust estimation</p>
             <h3>RLSAC</h3>
-            <p>Reinforcement learning enhanced sample consensus for end-to-end robust estimation in computer vision and robotics.</p>
+            <p>Reinforcement learning for robust estimation.</p>
             <div class="link-row"><a href="https://arxiv.org/abs/2308.05318">Paper</a><a href="https://github.com/IRMVLab/RLSAC">Code</a></div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="robot-vision">
-      <div class="section-header wide">
-        <p class="eyebrow">01</p>
-        <h2>3D/4D Robot Vision</h2>
-      </div>
-      <div class="content-grid">
-        <div class="content-block">
-          <p>Perception from RGB, depth, and LiDAR: localization, mapping, segmentation, and motion.</p>
-        </div>
-        <div class="content-block">
-          <p>Key challenges: 2D–3D alignment, scalable representations, and dynamic 4D scenes.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="world-models">
-      <div class="section-header wide">
-        <p class="eyebrow">02</p>
-        <h2>World-Model-Based Prediction</h2>
-      </div>
-      <div class="content-grid">
-        <div class="content-block">
-          <p>Predict scene flow and environmental change with diffusion, neural fields, and Gaussian models.</p>
-        </div>
-        <div class="content-block">
-          <p>World models support planning, simulation, and real-to-virtual transfer.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="robot-action">
-      <div class="section-header wide">
-        <p class="eyebrow">03</p>
-        <h2>Physics-Based Robot Action</h2>
-      </div>
-      <div class="content-grid">
-        <div class="content-block">
-          <p>Use perception and prediction to support physically grounded robot decisions.</p>
-        </div>
-        <div class="content-block">
-          <p>Focus areas: real-to-sim-to-real learning, contact-rich manipulation, and reinforcement learning.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
