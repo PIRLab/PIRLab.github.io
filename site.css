@@ -1297,10 +1297,12 @@ h3 {
 .facilities-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; margin-bottom: 28px; }
 .facilities-heading h2 { margin: 0; }
 .facilities-heading > p { max-width: 520px; margin: 0; color: #53635f; line-height: 1.6; }
-.facilities-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
+.facilities-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 18px; }
 .facilities-grid figure { margin: 0; }
-.facilities-grid img { display: block; width: 100%; height: 330px; object-fit: cover; border-radius: 8px; }
+.facilities-grid img { display: block; width: 100%; height: 260px; object-fit: cover; border-radius: 8px; }
 .facilities-grid figcaption { padding-top: 11px; color: #53635f; font-size: .9rem; }
+.facilities-note { margin: 22px 0 0; color: #66746f; font-size: .84rem; line-height: 1.5; }
+@media (max-width: 940px) { .facilities-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .facilities-heading, .facilities-grid { grid-template-columns: 1fr; } .facilities-heading { gap: 14px; } .facilities-grid img { height: 260px; } }
 @media (max-width: 940px) { .group-overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .group-overview-grid { grid-template-columns: 1fr; } .group-logo { height: 76px; } .group-logo img { max-height: 60px; } .group-detail-identity { justify-content: flex-start; margin-bottom: 20px; } }
