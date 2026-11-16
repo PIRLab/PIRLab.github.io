@@ -261,3 +261,11 @@ a.community-item:hover, a.community-item:focus-visible { background: #eaf3f2; }
 .explore-join, .explore-join video { background: #133844; }
 .explore-join-copy .home-label, .explore-join-copy > a { color: #8ee8d8; }
 .explore-join-copy p:not(.home-label) { color: #e3f2f0; }
+
+.footer-affiliations { padding: 45px clamp(24px, 6vw, 96px); background: #e9efec; color: #203c39; }
+.footer-affiliations h2 { margin: 0 0 20px; font-size: 1.15rem; }
+.footer-affiliation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.footer-affiliation-grid div { display: grid; gap: 9px; align-content: start; }
+.footer-affiliation-grid a { color: #315b5a; font-size: .9rem; line-height: 1.45; }
+.explore-join video { aspect-ratio: 16 / 9; object-fit: contain; }
+@media (max-width: 680px) { .footer-affiliation-grid { grid-template-columns: 1fr; } }

@@ -1306,3 +1306,6 @@ h3 {
 @media (max-width: 640px) { .facilities-heading, .facilities-grid { grid-template-columns: 1fr; } .facilities-heading { gap: 14px; } .facilities-grid img { height: 260px; } }
 @media (max-width: 940px) { .group-overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .group-overview-grid { grid-template-columns: 1fr; } .group-logo { height: 76px; } .group-logo img { max-height: 60px; } .group-detail-identity { justify-content: flex-start; margin-bottom: 20px; } }
+
+/* Keep complete robot demonstrations visible within project cards. */
+.selected-work-card video { object-fit: contain; background: #1e292b; }
