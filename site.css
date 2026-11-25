@@ -1300,6 +1300,7 @@ h3 {
 .facilities-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 18px; }
 .facilities-grid figure { margin: 0; }
 .facilities-grid img { display: block; width: 100%; height: 260px; object-fit: cover; border-radius: 8px; }
+.facilities-grid img.facility-image-contained { object-fit: contain; background: #e5ecea; }
 .facilities-grid figcaption { padding-top: 11px; color: #53635f; font-size: .9rem; }
 .facilities-note { margin: 22px 0 0; color: #66746f; font-size: .84rem; line-height: 1.5; }
 @media (max-width: 940px) { .facilities-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

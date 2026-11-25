@@ -47,6 +47,7 @@
 .featured-paper { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.13fr); min-height: 250px; background: #fff; border: 1px solid #e1e4dc; }
 .featured-media { overflow: hidden; background: #1e2725; }
 .featured-media img, .featured-media video { display: block; width: 100%; height: 100%; min-height: 250px; max-height: 310px; object-fit: cover; }
+.featured-media img[src$="GSRL.gif"] { object-fit: contain; }
 .featured-copy { padding: 32px clamp(28px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 .featured-venue { display: inline-block; padding: 6px 10px; background: #f5eae6; color: #954d3e; font-size: .68rem; font-weight: 800; letter-spacing: .1em; }
 .featured-venue span { padding-left: 4px; }

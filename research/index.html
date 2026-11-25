@@ -7,6 +7,7 @@
   <meta name="description" content="Research directions at the Physical Intelligence and Robotics Lab: 3D/4D robot vision, world-model-based prediction, and physics-based robot action.">
   <link rel="icon" type="image/jpg" href="../imgs/UOC_icon.jpg">
   <link rel="stylesheet" href="../site.css?v=overview-20261108">
+  <link rel="stylesheet" href="../interior-pages.css?v=research-join-20261125">
   <script src="../nav.js" defer></script>
 </head>
 <body class="page-body">
@@ -49,129 +50,28 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-header wide">
-        <p class="eyebrow">Overview</p>
-        <h2>Perception. Prediction. Action.</h2>
-      </div>
-      <div class="direction-flow" aria-label="Research direction sequence">
-        <div class="direction-card" id="robot-vision">
-          <svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg>
-          <h3>3D/4D Robot Vision</h3>
-          <p>Geometry · Mapping · Motion</p>
-        </div>
-        <div class="direction-card" id="world-models">
-          <svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="m8 11 8-4M8 13l8 4"/></svg>
-          <h3>World-Model-Based Prediction</h3>
-          <p>Scene flow · Dynamics · World models</p>
-        </div>
-        <div class="direction-card" id="robot-action">
-          <svg class="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13h7V5l7 7-7 7v-6H5z"/></svg>
-          <h3>Physics-Based Robot Action</h3>
-          <p>Manipulation · VLA · Robot control</p>
-        </div>
+    <section class="section research-contributions" aria-labelledby="contributions-title">
+      <div class="section-header wide"><p class="eyebrow">Research at PIRLab</p><h2 id="contributions-title">Main Group Contributions</h2><p>Our work connects perception, prediction and action to help robots understand and interact with the physical world.</p></div>
+      <div class="research-theme-grid">
+        <a class="research-theme" href="#robot-vision"><span>Perception</span><h3>3D/4D Robot Vision</h3><p>Geometry, mapping, localization and motion understanding.</p><span class="research-theme-link">Explore projects</span></a>
+        <a class="research-theme" href="#world-models"><span>Prediction</span><h3>World-Model-Based Prediction</h3><p>Learning how dynamic scenes and objects evolve.</p><span class="research-theme-link">Explore projects</span></a>
+        <a class="research-theme" href="#robot-action"><span>Action</span><h3>Physics-Based Robot Action</h3><p>Robot manipulation, embodied learning and control.</p><span class="research-theme-link">Explore projects</span></a>
       </div>
     </section>
-
-    <section class="section" id="embodied-world-models">
-      <div class="section-header wide">
-        <p class="eyebrow">Embodied Intelligence</p>
-        <h2>Featured projects.</h2>
-      </div>
-      <div class="selected-work-grid three">
-        <article class="selected-work-card">
-          <video src="../imgs/research-projects/stellar-pick-stick.mp4#t=1,8" autoplay muted loop playsinline></video>
-          <div class="selected-work-copy">
-            <p class="paper-area">Continual VLA</p>
-            <h3>Stellar VLA</h3>
-            <p>Continual learning for robot manipulation.</p>
-            <div class="link-row"><a href="stellar-vla/index.html">Local page</a><a href="https://stellarvla.github.io/">Project page</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <video src="../imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline controls></video>
-          <div class="selected-work-copy">
-            <p class="paper-area">Flow world model</p>
-            <h3>RoboFlow4D</h3>
-            <p>4D flow prediction for robot manipulation.</p>
-            <div class="link-row"><a href="roboflow4d/index.html">Local page</a><a href="https://simonlinsx.github.io/RoboFlow4D_Page/">Project page</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <video src="../imgs/research-projects/hear-moka-pot.mp4" autoplay muted loop playsinline controls></video>
-          <div class="selected-work-copy">
-            <p class="paper-area">VSLA</p>
-            <h3>HEAR</h3>
-            <p>Sound-aware robot manipulation.</p>
-            <div class="link-row"><a href="hear/index.html">Local page</a><a href="https://hear.irmv.top/">Project page</a></div>
-          </div>
-        </article>
-      </div>
+    <section class="section research-projects" id="selected-work"><div class="section-header wide"><p class="eyebrow">Current work</p><h2>Research themes &amp; projects</h2></div>
+      <div class="research-theme-heading" id="robot-vision"><p class="eyebrow">Perception</p><h2>3D/4D Robot Vision</h2><p>Methods for building spatial understanding from images, LiDAR and 3D observations.</p></div>
+      <article class="research-project-row" id="sni-slam"><div class="research-project-text"><p class="paper-area">Semantic SLAM</p><h3>SNI-SLAM and SNI-SLAM++</h3><p>Semantic mapping and 3D scene reconstruction using neural implicit representations.</p><div class="link-row"><a href="https://arxiv.org/abs/2311.11016">Paper</a><a href="https://github.com/IRMVLab/SNI-SLAM">Code</a></div></div><div class="research-project-visual"><img src="../imgs/SNI_SLAM.gif" alt="Semantic SLAM scene reconstruction" loading="lazy"></div></article>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">Localization</p><h3>Image–LiDAR registration</h3><p>End-to-end 2D–3D registration for vehicle localization.</p><div class="link-row"><a href="https://ieeexplore.ieee.org/abstract/document/11078010/">Paper</a></div></div><div class="research-project-visual"><img src="../imgs/I2Pnet.gif" alt="Image and LiDAR registration" loading="lazy"></div></article>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">LiDAR odometry</p><h3>PWCLO-Net and EfficientLO-Net</h3><p>Learning-based odometry from 3D point clouds.</p><div class="link-row"><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Wang_PWCLO-Net_Deep_LiDAR_Odometry_in_3D_Point_Clouds_Using_Hierarchical_CVPR_2021_paper.html">PWCLO-Net</a><a href="https://github.com/IRMVLab/EfficientLO-Net">EfficientLO-Net</a></div></div><div class="research-project-visual"><img src="../imgs/20_arxiv_3d_odometry.gif" alt="LiDAR odometry visualization" loading="lazy"></div></article>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">Robust estimation</p><h3>RLSAC</h3><p>Reinforcement learning for robust estimation.</p><div class="link-row"><a href="https://arxiv.org/abs/2308.05318">Paper</a><a href="https://github.com/IRMVLab/RLSAC">Code</a></div></div><div class="research-project-visual"><img src="../imgs/rlsac.gif" alt="Robust estimation visualization" loading="lazy"></div></article>
+      <div class="research-theme-heading" id="world-models"><span id="embodied-world-models"></span><p class="eyebrow">Prediction</p><h2>World-Model-Based Prediction</h2><p>Predicting motion and scene dynamics to support robot decisions.</p></div>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">Flow world model</p><h3>RoboFlow4D</h3><p>A lightweight flow world model predicts motion to guide robot manipulation.</p><div class="link-row"><a href="roboflow4d/index.html">Project details</a><a href="https://simonlinsx.github.io/RoboFlow4D_Page/">Project website</a></div></div><div class="research-project-visual"><video src="../imgs/research-projects/roboflow4d-cup.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Robot manipulation with RoboFlow4D"></video></div></article>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">3D scene flow</p><h3>3DSFLabelling and DifFlow3D</h3><p>3D motion estimation with auto-labelling and diffusion-based refinement.</p><div class="link-row"><a href="https://arxiv.org/abs/2402.18146">3DSFLabelling</a><a href="https://arxiv.org/abs/2311.17456">DifFlow3D</a></div></div><div class="research-project-visual"><img src="../imgs/FLOT_compare.gif" alt="3D scene flow comparison" loading="lazy"></div></article>
+      <div class="research-theme-heading" id="robot-action"><p class="eyebrow">Action</p><h2>Physics-Based Robot Action</h2><p>Learning and transferring skills for contact-rich robot manipulation.</p></div>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">Continual VLA</p><h3>Stellar VLA</h3><p>Continual learning for robot manipulation across tasks and skills.</p><div class="link-row"><a href="stellar-vla/index.html">Project details</a><a href="https://stellarvla.github.io/">Project website</a></div></div><div class="research-project-visual"><video src="../imgs/research-projects/stellar-pick-stick.mp4#t=1,8" autoplay muted loop playsinline preload="metadata" aria-label="Stellar VLA robot manipulation"></video></div></article>
+      <article class="research-project-row"><div class="research-project-text"><p class="paper-area">Vision–Sound–Language–Action</p><h3>HEAR</h3><p>Sound-aware manipulation that lets robots respond to acoustic events.</p><div class="link-row"><a href="hear/index.html">Project details</a><a href="https://hear.irmv.top/">Project website</a></div></div><div class="research-project-visual"><video src="../imgs/research-projects/hear-moka-pot.mp4" autoplay muted loop playsinline preload="metadata" aria-label="HEAR sound-aware robot manipulation"></video></div></article>
+      <article class="research-project-row" id="rl-gsbridge"><div class="research-project-text"><p class="paper-area">Real-to-sim-to-real</p><h3>RL-GSBridge</h3><p>Gaussian splatting connects simulation and reality for robot manipulation learning.</p><div class="link-row"><a href="https://arxiv.org/abs/2409.20291">Paper</a><a href="https://github.com/IRMV-Manipulation-Group/RL-GSBridge">Code</a></div></div><div class="research-project-visual"><img src="../imgs/GSRL.gif" alt="Real-to-sim-to-real robot manipulation" loading="lazy"></div></article>
     </section>
-
-    <section class="section" id="selected-work">
-      <div class="section-header wide">
-        <p class="eyebrow">Selected Work</p>
-        <h2>Representative work.</h2>
-      </div>
-      <div class="selected-work-grid">
-        <article class="selected-work-card">
-          <img src="../imgs/I2Pnet.gif" alt="Image and LiDAR point cloud registration for vehicle localization" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">2D-3D localization</p>
-            <h3>End-to-end 2D-3D Registration between Image and LiDAR Point Cloud</h3>
-            <p>Image–LiDAR registration for vehicle localization.</p>
-            <div class="link-row"><a href="https://ieeexplore.ieee.org/abstract/document/11078010/">Paper</a><a href="../papers/index.html">Publication list</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card" id="sni-slam">
-          <img src="../imgs/SNI_SLAM.gif" alt="Semantic neural implicit SLAM reconstruction" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Semantic SLAM</p>
-            <h3>SNI-SLAM and SNI-SLAM++</h3>
-            <p>Semantic mapping and 3D scene reconstruction.</p>
-            <div class="link-row"><a href="https://arxiv.org/abs/2311.11016">Paper</a><a href="https://github.com/IRMVLab/SNI-SLAM">Code</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <img src="../imgs/FLOT_compare.gif" alt="3D scene flow auto-labelling comparison" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">3D scene flow</p>
-            <h3>3DSFLabelling and DifFlow3D</h3>
-            <p>3D scene flow with auto-labelling and diffusion.</p>
-            <div class="link-row"><a href="https://arxiv.org/abs/2402.18146">3DSFLabelling</a><a href="https://arxiv.org/abs/2311.17456">DifFlow3D</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card" id="rl-gsbridge">
-          <img src="../imgs/GSRL.gif" alt="Real2Sim2Real robotic manipulation learning with Gaussian splatting" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Robot manipulation</p>
-            <h3>RL-GSBridge</h3>
-            <p>Gaussian splatting for real-to-sim-to-real manipulation.</p>
-            <div class="link-row"><a href="https://arxiv.org/abs/2409.20291">Paper</a><a href="https://github.com/IRMV-Manipulation-Group/RL-GSBridge">Code</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <img src="../imgs/20_arxiv_3d_odometry.gif" alt="Deep LiDAR odometry in 3D point clouds" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">LiDAR odometry</p>
-            <h3>PWCLO-Net and EfficientLO-Net</h3>
-            <p>Learning-based LiDAR odometry.</p>
-            <div class="link-row"><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Wang_PWCLO-Net_Deep_LiDAR_Odometry_in_3D_Point_Clouds_Using_Hierarchical_CVPR_2021_paper.html">PWCLO-Net</a><a href="https://github.com/IRMVLab/EfficientLO-Net">EfficientLO-Net</a></div>
-          </div>
-        </article>
-        <article class="selected-work-card">
-          <img src="../imgs/rlsac.gif" alt="Reinforcement learning enhanced robust estimation" loading="lazy">
-          <div class="selected-work-copy">
-            <p class="paper-area">Robust estimation</p>
-            <h3>RLSAC</h3>
-            <p>Reinforcement learning for robust estimation.</p>
-            <div class="link-row"><a href="https://arxiv.org/abs/2308.05318">Paper</a><a href="https://github.com/IRMVLab/RLSAC">Code</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
   </main>
 
   <footer class="site-footer">
