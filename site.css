@@ -1309,3 +1309,38 @@ h3 {
 
 /* Keep complete robot demonstrations visible within project cards. */
 .selected-work-card video { object-fit: contain; background: #1e292b; }
+
+/* Shared people directory */
+.team-section { border-top: 1px solid var(--line); }
+.team-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 26px; }
+.team-section-heading h2 { margin: 0; }
+.team-section-heading > p { max-width: 380px; margin: 0; color: var(--muted); line-height: 1.55; }
+.team-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 0 36px; color: var(--muted); font-size: .85rem; }
+.team-legend > span:last-child { margin-left: 5px; }
+.team-subheading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 22px 0 16px; border-top: 1px solid var(--line); }
+.team-subheading h3 { margin: 0; color: var(--ink); font-size: 1.35rem; }
+.team-subheading > span { color: var(--muted); font-size: .9rem; }
+.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-bottom: 44px; }
+.team-lead-grid { display: block; }
+.team-lead-grid .team-person { display: grid; grid-template-columns: minmax(230px, 38%) 1fr; max-width: 760px; }
+.team-lead-grid .team-portrait { height: 100%; min-height: 230px; }
+.team-person { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.team-portrait { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #e3eceb; }
+.team-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.team-badges { position: absolute; inset: 12px 12px auto; display: flex; flex-wrap: wrap; gap: 5px; }
+.team-badge { display: inline-block; padding: 5px 8px; border-radius: 3px; color: #fff; font-size: .72rem; font-weight: 700; line-height: 1.15; }
+.team-badge-cambridge { background: #175a71; }
+.team-badge-ireland { background: #436c59; }
+.team-badge-sjtu { background: #963c4c; }
+.team-person-copy { padding: 18px; }
+.team-person-copy h3 { margin: 6px 0 9px; font-size: 1.12rem; line-height: 1.25; }
+.team-person-copy p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+.team-person-copy .team-role { color: #175a71; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.team-directory-link { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.team-directory-link h2 { margin: 4px 0; }
+.team-directory-link p { margin: 0; }
+.team-directory-link a { flex: none; padding: 12px 18px; color: white; background: #175a71; border-radius: 4px; font-weight: 700; }
+@media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .team-section-heading, .team-directory-link { align-items: flex-start; flex-direction: column; } .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .team-person-copy { padding: 14px; } }
+@media (max-width: 520px) { .team-lead-grid .team-person { grid-template-columns: 1fr; } .team-lead-grid .team-portrait { height: auto; } }
+@media (max-width: 390px) { .team-grid { grid-template-columns: 1fr; } }
