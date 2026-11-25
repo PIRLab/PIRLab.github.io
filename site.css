@@ -1341,11 +1341,12 @@ h3 {
 .team-directory-link p { margin: 0; }
 .team-directory-link a { flex: none; padding: 12px 18px; color: white; background: #175a71; border-radius: 4px; font-weight: 700; }
 .visitors-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.visitor-card { padding: 20px 20px 18px; border-left: 4px solid #183d4c; border-radius: 7px; background: #edf2f2; }
-.visitor-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.visitor-card { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: start; gap: 15px; padding: 20px 18px; border-left: 4px solid #183d4c; border-radius: 7px; background: #edf2f2; }
+.visitor-photo { display: block; width: 72px; height: 86px; object-fit: cover; object-position: center 25%; border-radius: 4px; background: #d9e5e3; }
+.visitor-card-header { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px 12px; }
 .visitor-card h4 { margin: 0; color: var(--ink); font-size: 1.08rem; line-height: 1.3; }
-.visitor-badges { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 5px; }
-.visitor-card > p { margin: 14px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+.visitor-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+.visitor-copy > p { margin: 11px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
 @media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 1000px) { .visitors-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .team-section-heading, .team-directory-link { align-items: flex-start; flex-direction: column; } .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .team-person-copy { padding: 14px; } }
